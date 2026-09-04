@@ -1,0 +1,172 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "started_at": "2026-09-04T10:46:36.260Z",
+  "bounty": "100",
+  "steps": [
+    {
+      "label": "deploy",
+      "hash": "0x50e5af7ac5f5444b333840384204a75f6e8fc761a376bcf43c1cfc23a2b185bb",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 5204,
+      "ms_to_finalized": 34396,
+      "leader_model": "llm-router/policy:prd-glm",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "open_commission:honest",
+      "hash": "0x89ac68b4a31411b8d1f0fc5418721a11d923f3dcad746b419aef2ed4b2eae425",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4568,
+      "ms_to_finalized": 33541,
+      "leader_model": "llm-router/policy:prd-sonnet",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "submit_deliverable:honest",
+      "hash": "0xb254a1f8959bb373bc5b49fc6a7ce71f28500353f589034bab38dbd9ebbfb382",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4617,
+      "ms_to_finalized": 34075,
+      "leader_model": "openrouter/openai/gpt-5.4",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "evaluate:honest",
+      "hash": "0x97dd28144cafafc8494e1646ceeae2ee48a1b893db0f7d9badf0a8dd7075c3f8",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 24292,
+      "ms_to_finalized": 56331,
+      "leader_model": "llm-router/policy:prd-kimi",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "open_commission:mutated",
+      "hash": "0xe26a574e0f1fbd817c1764c5a489cd664098e69413a0d339ee202dd127216878",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4534,
+      "ms_to_finalized": 33486,
+      "leader_model": "llm-router/policy:prd-mistral",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "submit_deliverable:mutated",
+      "hash": "0x8d6ddc102f4c85c64e33e6337773bc01859d5aa113772a6c032671d24aecda7d",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 8988,
+      "ms_to_finalized": 38043,
+      "leader_model": "llm-router/policy:prd-grok",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "evaluate:mutated",
+      "hash": "0xdf22a502c89d15e4f6a50af26a70196aba81e4606193eb075059cbaeb4decd69",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 17626,
+      "ms_to_finalized": 94429,
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    }
+  ],
+  "cases": {
+    "honest": {
+      "commission_id": "dash-e57149d0",
+      "brief_digest": "01585eea1b64fdbe776b965bbf23d5a35226e102a6f6e9486db250672374395c",
+      "deliverable_bytes": 18975,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "REJECTED",
+      "reasons": [
+        "P1 claims posts drew 'well over a thousand reactions and hundreds of comments each', but cited evidence E1, E2, E3, E7 contain no reaction or comment counts.",
+        "P1 states Anthropic reversed course 'later that month' (April), but cited evidence E7 does not mention any date for the reversal.",
+        "The deliverable fails to state what was set aside and which sources did not answer (OpenClaw on Reddit and Hermes Agent on Reddit were unreachable per fetch receipts), violating an acceptance criterion."
+      ],
+      "judge_output": "{\"verdict\":\"REJECTED\",\"reasons\":[\"P1 claims posts drew 'well over a thousand reactions and hundreds of comments each', but cited evidence E1, E2, E3, E7 contain no reaction or comment counts.\",\"P1 states Anthropic reversed course 'later that month' (April), but cited evidence E7 does not mention any date for the reversal.\",\"The deliverable fails to state what was set aside and which sources did not answer (OpenClaw on Reddit and Hermes Agent on Reddit were unreachable per fetch receipts), violating an acceptance criterion.\"]}",
+      "status": "rejected",
+      "leader_model": "llm-router/policy:prd-kimi",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      },
+      "ms_to_accepted": 24292,
+      "ms_to_finalized": 56331,
+      "evaluate_tx": "0x97dd28144cafafc8494e1646ceeae2ee48a1b893db0f7d9badf0a8dd7075c3f8"
+    },
+    "mutated": {
+      "commission_id": "dash-e57149d0-mutated",
+      "brief_digest": "a24fa304cddd0f8a9ba80afcad7f958faa800ad826754036239008d17cd3dd8e",
+      "deliverable_bytes": 19122,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "REJECTED",
+      "reasons": [
+        "P1 makes unsupported claims about a $2.4 billion acquisition in July 2026 and a 78% user migration to Hermes Agent; these facts are not in E1, E2, E3, or E7.",
+        "P2 cites no evidence, violating the evidence requirement.",
+        "P3 cites E31, which is not in the evidence list.",
+        "The deliverable fails to state which sources did not answer (e.g., Reddit), as required by the acceptance criteria."
+      ],
+      "judge_output": "{\"verdict\": \"REJECTED\", \"reasons\": [\"P1 makes unsupported claims about a $2.4 billion acquisition in July 2026 and a 78% user migration to Hermes Agent; these facts are not in E1, E2, E3, or E7.\", \"P2 cites no evidence, violating the evidence requirement.\", \"P3 cites E31, which is not in the evidence list.\", \"The deliverable fails to state which sources did not answer (e.g., Reddit), as required by the acceptance criteria.\"]}",
+      "status": "rejected",
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      },
+      "ms_to_accepted": 17626,
+      "ms_to_finalized": 94429,
+      "evaluate_tx": "0xdf22a502c89d15e4f6a50af26a70196aba81e4606193eb075059cbaeb4decd69"
+    }
+  },
+  "accounts": {
+    "client": "0x72f2FA748b8a4062B2C1c1895Cc6fB13326E54B6",
+    "deliverer": "0xaBfBFb7780B6689e7dF71BeC0Fc0C72C14a7154F"
+  },
+  "balances_before": {
+    "client": "1000",
+    "deliverer": "1"
+  },
+  "contract_address": "0x27E0E610e824504a4cD36009cFEfCC1856E88182",
+  "balances_after": {
+    "client": "800",
+    "deliverer": "1",
+    "contract": "200"
+  },
+  "total_ms": 343603,
+  "finished_at": "2026-09-04T10:52:19.863Z"
+}

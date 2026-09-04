@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "The machine-readable terms of the commission. One copy, read by the direct tests",
+    "and by the Studionet driver, so the terms the judge is shown are the terms the",
+    "tests pin.",
+    "",
+    "A note on where each clause is checkable. DASH draws the honesty layer — what was",
+    "set aside, which sources did not answer — ITSELF, outside the brief, because those",
+    "are DASH's records and not the model's prose (ADR 0025). So a criterion asking the",
+    "PROSE to state them is asking the deliverable to do something the product",
+    "deliberately does elsewhere. The requirement is real; it belongs in the evidence",
+    "requirements, against the fetch receipts the payload actually ships.",
+    "",
+    "Run 1 on Studionet found this the hard way: the judge rejected an honest brief for",
+    "failing a criterion that was misplaced rather than unmet. See transcripts/."
+  ],
+  "asked": "Watch the public sources for OpenClaw and Hermes Agent and write up what changed, so a reader can see what is being said without reading every thread. Group the material by subject rather than by source.",
+  "acceptance_criteria": "Covers both OpenClaw and Hermes Agent. Organised by subject, with a heading per subject rather than one section per source. Written as continuous prose a person can read, not a list of headlines. Says what is being claimed and by whom, without overstating it.",
+  "evidence_requirements": "Every paragraph must cite at least one evidence item by index, and every cited index must resolve to an item in the EVIDENCE list. Every fact, number, name and date in a paragraph must appear in the evidence that paragraph cites. The deliverable must ship the run's fetch receipts, including the sources that did not answer."
+}

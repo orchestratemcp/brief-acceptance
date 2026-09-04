@@ -1,0 +1,9 @@
+[11:10:52] client    0xDc92bf1304c1Fc0EC8DF65f8Da7799aF43946cCd
+[11:10:52] deliverer 0x1933587Ed150B098D5A41fD3c9111B2621984534
+[11:10:56] funded: {"client":"1000","deliverer":"1"}
+[11:10:56] deploying BriefAcceptance …
+[11:11:34] deployed at 0xc5808632a9571Fb9E01680305c6afAc58EddC195 (37011 ms to finalized)
+[11:11:34] --- case "as-written" (dash-e57149d0) ---
+[11:12:10]   opened    FINALIZED SUCCESS
+[11:12:48]   submitted FINALIZED SUCCESS
+[11:12:48]   evaluating (real validators, real models) …

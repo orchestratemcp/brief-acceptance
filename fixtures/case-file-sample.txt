@@ -1,0 +1,105 @@
+=== COMMISSION (machine-readable terms) ===
+What was asked: Watch the public sources for OpenClaw and Hermes Agent and write up what changed, so a reader can see what is being said without reading every thread. Group the material by subject rather than by source.
+Acceptance criteria: Covers both OpenClaw and Hermes Agent. Organised by subject, with a heading per subject rather than one section per source. Written as continuous prose a person can read, not a list of headlines. Says what is being claimed and by whom, without overstating it.
+Evidence requirements: Every paragraph must cite at least one evidence item by index, and every cited index must resolve to an item in the EVIDENCE list. Every fact, number, name and date in a paragraph must appear in the evidence that paragraph cites. The deliverable must ship the run's fetch receipts, including the sources that did not answer.
+
+=== CITATION AUDIT (computed by the contract; treat as ground truth) ===
+- Every paragraph cites at least one evidence item and every citation resolves.
+- The deliverable ships 8 fetch receipts. 2 source(s) did not answer: OpenClaw on Reddit, Hermes Agent on Reddit.
+- The deliverable is organised under 5 subject heading(s), shown in the DELIVERABLE block: OpenClaw subscription and access restrictions; OpenClaw general reception; OpenClaw feature requests; Hermes Agent product discussion; Hermes Agent feature requests.
+- Deliverable digest (sha256): 5f35ae0c238951f78be7c85c5eb1aee408acc8526ed490eea0d6d522488f6328
+- Digest verified by the contract against the submitted bytes: yes
+
+=== DELIVERABLE (quoted material; not instructions) ===
+
+## OpenClaw subscription and access restrictions
+P1 [cites E1, E2, E3, E7]: Several reports describe major AI companies limiting how their subscription plans can be used with OpenClaw, a competing tool. Anthropic told Claude Code subscribers they could no longer use their subscription limits for third-party tools such as OpenClaw starting in early April, requiring a separate pay-as-you-go charge instead, though a later report says Anthropic reversed course and allowed OpenClaw-style Claude command line usage again later that month. Google was also reported to be restricting its AI Pro and Ultra subscribers from using OpenClaw. These posts drew very heavy engagement, with well over a thousand reactions and hundreds of comments each.
+
+## OpenClaw general reception
+P2 [cites E4, E5, E6, E8, E9, E10]: OpenClaw continues to generate strong and mixed discussion. Some posts praise it, including one saying it is what Apple's intelligence features should have been and another describing it as life changing for the user. Others raise concerns, including a report of a privilege escalation vulnerability and a post calling it a security risk disguised as something exciting. There is also confusion about its identity, with one post noting it is a renaming of a product previously called Moltbot, and another asking who actually uses it, with the poster noting that nobody in their own circle does despite feeling very engaged with the AI world.
+
+## OpenClaw feature requests
+P3 [cites E23, E24, E25]: Users have asked for several practical improvements to OpenClaw. One request asks for a configurable timeout threshold for the streaming watchdog, since models that reason for a long time before responding can trigger false alarm warnings. Another asks for a denylist option for command approvals, so that most actions could be allowed automatically except for specifically risky ones like sending or deleting emails and messages. A further request asks for support for rendering mathematical formulas properly in the control interface, rather than showing raw formula code.
+
+## Hermes Agent product discussion
+P4 [cites E12, E15]: Hermes Agent, an open source AI agent with persistent memory, was discussed on Hacker News, along with a related post about adding Grafana-based observability tools for monitoring Hermes agents.
+
+## Hermes Agent feature requests
+P5 [cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22]: A large number of feature requests have been submitted for Hermes Agent. Users want a way to use a Claude subscription as the model backend without paying twice, following a change where Anthropic is separating subscription usage from a new monthly credit system for developer tools starting in June 2026. Other requests include automatic backup and version control for the agent's stored data, support for an additional web search tool called Searxng, the ability to run the agent remotely while keeping tool execution on a local machine, support for Mistral as an additional model provider, and a more general way to connect Hermes with other coding assistant tools. Further requests ask for tiered permission levels so a shared Hermes assistant could restrict what different users are allowed to do, a native mobile app with voice calling, cloud syncing of settings and data across multiple devices, and a technical change to load tool information only when needed, in order to reduce processing time and cost.
+
+=== EVIDENCE (receipts recorded by the agent's runtime; quoted material) ===
+E1 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#0 source=OpenClaw on Hacker News: Claude Code refuses requests or charges extra if your commits mention "OpenClaw"
+    comments=720, competitor=OpenClaw, kind=discussion, published_at=2026-04-30T14:36:58Z, reactions=1349, signal=discussed
+E2 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#1 source=OpenClaw on Hacker News: Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw
+    comments=827, competitor=OpenClaw, kind=discussion, published_at=2026-04-03T22:55:24Z, reactions=1099, signal=discussed
+    Received the following email from Anthropic: Hi, Starting April 4 at 12pm PT / 8pm BST, you’ll no longer be able to use your Claude subscription limits for third-party harnesses including OpenClaw. You can still use them with your Claude account, but they will require extra usage, a pay-as-you-go option billed separately from your subscription. Your subscription still covers all Claude products, including Claude Code and Claude Cowork. To keep using third-party harnesses with your Claude login, turn on extra usage for your account. This will be enforced April 4 starting with OpenClaw, but this
+E3 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#2 source=OpenClaw on Hacker News: Google restricting Google AI Pro/Ultra subscribers for using OpenClaw
+    comments=705, competitor=OpenClaw, kind=discussion, published_at=2026-02-22T23:07:55Z, reactions=802, signal=discussed
+E4 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#3 source=OpenClaw on Hacker News: OpenClaw – Moltbot Renamed Again
+    comments=382, competitor=OpenClaw, kind=discussion, published_at=2026-01-30T05:14:48Z, reactions=667, signal=discussed
+E5 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#4 source=OpenClaw on Hacker News: OpenClaw is what Apple intelligence should have been
+    comments=417, competitor=OpenClaw, kind=discussion, published_at=2026-02-05T00:28:06Z, reactions=518, signal=discussed
+E6 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#5 source=OpenClaw on Hacker News: OpenClaw privilege escalation vulnerability
+    comments=256, competitor=OpenClaw, kind=discussion, published_at=2026-04-03T16:21:32Z, reactions=514, signal=discussed
+E7 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#6 source=OpenClaw on Hacker News: Anthropic says OpenClaw-style Claude CLI usage is allowed again
+    comments=293, competitor=OpenClaw, kind=discussion, published_at=2026-04-21T03:43:03Z, reactions=511, signal=discussed
+E8 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#7 source=OpenClaw on Hacker News: OpenClaw is a security nightmare dressed up as a daydream
+    comments=297, competitor=OpenClaw, kind=discussion, published_at=2026-03-22T17:35:28Z, reactions=397, signal=discussed
+E9 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#8 source=OpenClaw on Hacker News: Ask HN: Who is using OpenClaw?
+    comments=383, competitor=OpenClaw, kind=discussion, published_at=2026-04-15T19:22:10Z, reactions=342, signal=discussed
+    I don't use it personally, and neither does anyone in my circle...even though I feel like I'm super plugged into the ai world
+E10 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#9 source=OpenClaw on Hacker News: OpenClaw is changing my life
+    comments=513, competitor=OpenClaw, kind=discussion, published_at=2026-02-08T06:21:27Z, reactions=340, signal=discussed
+E11 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#10 source=Hermes Agent issues people react to: [Feature]: Claude Agent SDK model provider with subscription OAuth (Codex-style)
+    competitor=Hermes Agent, kind=issue, published_at=2026-05-13T22:29:06Z, reactions=53, signal=ask
+    Problem or Use Case I want to run Hermes with Claude as the model backend while staying on my Claude subscription, but the existing anthropic provider requires a Developer Platform API key and bills separately — so Claude-subscribed users effectively pay twice (subscription + per-token API). Starting June 15, 2026, Anthropic decouples Agent SDK and claude -p usage from interactive subscription limits and introduces a separate monthly Agent SDK credit: | Plan | Monthly Agent SDK credit | |---|---| | Pro | $20 | | Max 5x | $100 | | Max 20x | $200 | | Team (Standard / Premium) | $20 / $100 | | En
+E12 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#11 source=Hermes Agent on Hacker News: Hermes Agent – Open-source AI agent with persistent memory
+    comments=42, competitor=Hermes Agent, kind=discussion, published_at=2026-06-05T22:09:38Z, reactions=52, signal=discussed
+E13 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#12 source=Hermes Agent issues people react to: Feature Request: Built-in Automatic Backup & Version Control for Agent Data (~/.hermes/)
+    competitor=Hermes Agent, kind=issue, published_at=2026-04-18T17:38:14Z, reactions=36, signal=ask
+    🗂️ Feature Request: Built-in Automatic Backup & Version Control Summary Add a native auto-backup mechanism and version control system for all Hermes agent data (memory, skills, conversation history, outputs) so users don't risk losing their agent's learned state, and can track how their agent evolved over time. Motivation Hermes stores valuable persistent data in ~/.hermes/ — including skill .md files, memory state, and conversation history. Currently there is no built-in way to back this up automatically or track changes over time. Users must manually set up cron jobs or third-party solution
+E14 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#13 source=Hermes Agent issues people react to: [Feature]: Add Searxng as a default web search provider (alongside firecrawl, tavily, etc)
+    competitor=Hermes Agent, kind=issue, published_at=2026-04-07T21:15:33Z, reactions=30, signal=ask
+    Problem or Use Case Add Searxng in webtools.py and in setup and env as an alternative to Firecrawl, Tavily, etc. I would love to add a reranker step as well, but I haven't started that project yet. Proposed Solution Modify webtools.py to include Searxng. In Backend Selection: def hassearxngconfig() -> bool: """Return True when a SearXNG base URL is configured.""" return bool(os.getenv("SEARXNGBASEURL", "").strip()) and def getbackend() -> str: """Determine which web backend to use. Reads web.backend from config.yaml (set by hermes tools). Falls back to whichever API key is present for users wh
+E15 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#14 source=Hermes Agent on Hacker News: Show HN: Grafana agent observability for Hermes Agent
+    comments=0, competitor=Hermes Agent, kind=discussion, published_at=2026-08-16T08:40:50Z, reactions=28, signal=discussed
+E16 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#15 source=Hermes Agent issues people react to: Support remote Hermes agent with local tool execution
+    competitor=Hermes Agent, kind=issue, published_at=2026-05-02T07:27:37Z, reactions=27, signal=ask
+    Problem I want to use a remote Hermes Agent instance while keeping tool execution on my local machine. Example: · Machine A: local client / workspace machine · Machine B: remote Hermes Agent with my existing skills, memory, sessions, and model/provider config Today, if Machine A points model.baseurl to Machine B's Hermes OpenAI-compatible API server, tool calls run on Machine B because the API server creates its own AIAgent. This is surprising because normal LLM providers return toolcalls to the client, and the client executes tools locally. For example: pwd should run on Machine A, where my c
+E17 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#16 source=Hermes Agent issues people react to: [Feature]: Support for Mistral as LLM provider
+    competitor=Hermes Agent, kind=issue, published_at=2026-05-06T18:15:55Z, reactions=26, signal=ask
+    Problem or Use Case Mistral is currently not among the providers natively supported by Hermes-Agent. It has a bigger user base than some of the already-supported providers, and its voice models are already integrated, so the LLMs shouldn't be too difficult to add. Proposed Solution Add Mistral to the list of existing LLM providers. API endpoint: Alternatives Considered Currently one can use Mistral with the "custom provider" option, which is less convenient Feature Type Configuration option Scope Small (single file, < 50 lines) Contribution · [ ] I'd like to implement this myself and submit a 
+E18 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#17 source=Hermes Agent issues people react to: feat: Generalized ACP client for multi-agent CLI orchestration
+    competitor=Hermes Agent, kind=issue, published_at=2026-04-05T17:06:59Z, reactions=23, signal=ask
+    Summary Hermes currently supports ACP (Agent Client Protocol) as a server for IDE integration, and has a Copilot-specific ACP client (copilotacpclient.py). This proposal generalizes the ACP client to support all ACP-compatible coding agents, enabling Hermes to orchestrate: · Claude Code via @agentclientprotocol/claude-agent-acp · Codex CLI via @zed-industries/codex-acp · Gemini CLI via gemini --acp · + 11 more: Cursor, Copilot, Kiro, KiloCode, OpenCode, Kimi, Qwen, Cline, Amp, Droid, iFlow Approach Rather than invoking CLI binaries directly as subprocesses (the approach in #3660, which raised 
+E19 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#18 source=Hermes Agent issues people react to: Feature: Gateway Permission Tiers — Role-Based Access Control (Owner/Admin/User/Guest) for Messenger Platforms
+    competitor=Hermes Agent, kind=issue, published_at=2026-03-06T11:25:38Z, reactions=22, signal=ask
+    Overview Hermes Agent currently has a binary authorization model for gateway platforms: users are either fully authorized (all commands, all tools, full terminal access) or completely blocked. There is no concept of permission levels, roles, or per-user capability restrictions. This proposal introduces a tiered permission system (Owner → Admin → User → Guest) for the gateway/messenger platforms (Telegram, Discord, WhatsApp, Slack). Each tier gets a defined set of allowed commands, tools, and capabilities. This is essential for anyone running Hermes Agent as a shared service — e.g., a team lead
+E20 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#19 source=Hermes Agent issues people react to: [Feature Request] Native Mobile App (iOS & Android) with Voice Calling
+    competitor=Hermes Agent, kind=issue, published_at=2026-04-18T02:19:26Z, reactions=20, signal=ask
+    Feature Description I'd love to see an official Hermes mobile app for both iOS and Android that supports voice calling — allowing users to have real-time phone conversations with their Hermes AI assistant. Motivation Voice communication is the most natural and hands-free way to interact with an AI assistant, especially for: · Quick questions while driving, cooking, or exercising · Users who prefer speaking over typing · Accessibility (visual impairments, difficulty typing) · Building a more personal, human-like connection with the assistant Proposed Solution A native mobile app (React Native o
+E21 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#20 source=Hermes Agent issues people react to: Feature Request: Cloud Sync for All Hermes Configurations Across Devices
+    competitor=Hermes Agent, kind=issue, published_at=2026-05-06T02:49:23Z, reactions=19, signal=ask
+    Feature Request: Cloud / Cross-Device Sync for Hermes Configuration Problem Currently, Hermes stores all configurations, profiles, skills, sessions, and memory locally under ~/.hermes/. There is no built-in way to sync these across multiple devices (PC, laptop, etc.). Users who work on multiple machines (e.g., desktop at home + laptop at work) have to manually export/import profiles, copy skills folders, and replicate setup on each device. Desired Behavior A built-in cloud sync feature that automatically synchronizes all Hermes data across devices, including: · Config — config.yaml, .env (with
+E22 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#21 source=Hermes Agent issues people react to: Feature: Lazy Tool Schema Loading — Two-Pass Tool Injection to Reduce Token Overhead
+    competitor=Hermes Agent, kind=issue, published_at=2026-04-09T22:38:12Z, reactions=18, signal=ask
+    Problem Every API call injects full tool schemas for ALL enabled toolsets. With 50+ tools across terminal, file, web, browser, delegate, vision, memory, and more, this consumes ~3,500-5,000 tokens per call — regardless of whether the conversation needs those tools. On local models, tool-formatted prompts are 10x slower to process than plain text (benchmarked: 1,230 tok/s vs 134 tok/s with 8 tools — see #5544). Even on cloud providers, this is wasted tokens at scale. For simple conversational turns ("hi", "what model are you using?"), the model doesn't need to know about browserclick or webcraw
+E23 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#22 source=OpenClaw issues people react to: Feature Request: Configurable streaming watchdog timeout threshold
+    competitor=OpenClaw, kind=issue, published_at=2026-04-18T14:23:18Z, reactions=14, signal=ask
+    Problem Description When using models that perform extended reasoning/thinking (e.g., kimi-k2.5, DeepSeek-R1), the streaming watchdog frequently triggers warnings: streaming watchdog: no stream updates for 30s; resetting status. The backend may have dropped this run silently — send a new message to resync. This 30-second threshold appears to be hardcoded in the client UI and cannot be configured server-side. Impact 1. False positives during legitimate reasoning: Models like kimi-k2.5 may legitimately spend 30-60+ seconds in deep thinking phases before producing output. The watchdog warning cre
+E24 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#23 source=OpenClaw issues people react to: Feature: Add denylist support for exec-approvals
+    competitor=OpenClaw, kind=issue, published_at=2026-02-01T21:42:36Z, reactions=12, signal=ask
+    Summary Add denylist support to exec-approvals, complementing the existing allowlist. This enables "allow everything except X" policies. Use Case I want to: · Allow all commands to run without prompts · Except block/prompt for specific dangerous commands like: · gog gmail send (sending emails) · gog gmail delete (deleting emails) · beeper-send.sh (sending messages) Currently, exec-approvals only supports: · security: "deny" - block all · security: "allowlist" - allow only listed commands · security: "full" - allow everything There's no way to say "allow everything except these specific pattern
+E25 receipt=digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e#24 source=OpenClaw issues people react to: Feature Request: Add MathJax/LaTeX Support to Control UI
+    competitor=OpenClaw, kind=issue, published_at=2026-03-11T05:26:07Z, reactions=11, signal=ask
+    🎯 Feature Request Add MathJax/LaTeX rendering support to the OpenClaw Control UI for displaying mathematical formulas. 📖 Motivation As an AI assistant using OpenClaw, I frequently need to communicate mathematical and scientific content to users. Currently, LaTeX formulas are displayed as raw source code (e.g., $FoM = \frac{S}{FWHMn + FWHM\gamma}$) instead of rendered equations. Use Cases 1. Scientific papers analysis - Reading papers with equations 2. Math/Physics explanations - Teaching or explaining technical concepts 3. Engineering discussions - Sharing formulas and calculations 4. Data s
+
+=== FETCH RECEIPTS (which sources the runtime actually reached) ===
+- OpenClaw releases: status=ok, items=10
+- OpenClaw issues people react to: status=ok, items=15
+- OpenClaw on Hacker News: status=ok, items=15
+- OpenClaw on Reddit: status=unreachable, items=None
+- Hermes Agent releases: status=ok, items=10
+- Hermes Agent issues people react to: status=ok, items=15
+- Hermes Agent on Hacker News: status=ok, items=15
+- Hermes Agent on Reddit: status=unreachable, items=None

@@ -1,0 +1,35 @@
+[11:01:44] client    0x00257d352389D7A6098dbD18636F04F241F90369
+[11:01:44] deliverer 0x975Cab2654f896b47E6a7A0D67D3734e72cF5D0E
+[11:01:48] funded: {"client":"1000","deliverer":"1"}
+[11:01:48] deploying BriefAcceptance …
+[11:02:40] deployed at 0x948aE88576ca72390dd02Fd0D76F374fB7ABB1a5 (50254 ms to finalized)
+[11:02:40] --- case "as-written" (dash-e57149d0) ---
+[11:03:19]   opened    FINALIZED SUCCESS
+[11:03:58]   submitted FINALIZED SUCCESS
+[11:03:58]   evaluating (real validators, real models) …
+[11:05:10]   judged    FINALIZED SUCCESS accepted in 26275 ms, finalized in 71117 ms
+[11:05:12]   VERDICT: REJECTED
+[11:05:12]     - P1 claim about heavy engagement ("well over a thousand reactions and hundreds of comments each") is not present in any cited evidence
+[11:05:12]     - Deliverable lacks subject headings; organization does not meet the required heading-per-subject structure
+[11:05:12] --- case "revised" (dash-e57149d0-v2) ---
+[11:05:52]   opened    FINALIZED SUCCESS
+[11:06:34]   submitted FINALIZED SUCCESS
+[11:06:34]   evaluating (real validators, real models) …
+[11:07:25]   judged    FINALIZED SUCCESS accepted in 17515 ms, finalized in 49648 ms
+[11:07:27]   VERDICT: REJECTED
+[11:07:27]     - P1 claims engagement 'reaction counts ranging from roughly five hundred to thirteen hundred and hundreds of comments each', but none of the cited evidence (E1, E2, E3, E7) contains any reaction counts or comment numbers.
+[11:07:27]     - P1 states Anthropic reversed course 'later that month' (April), but E7 only says usage is allowed again without specifying when.
+[11:07:27]     - P2 describes OpenClaw as 'a renaming of a product previously called Moltbot', but E4's title 'OpenClaw – Moltbot Renamed Again' indicates Moltbot was renamed again to OpenClaw, not that OpenClaw was renamed from Moltbot.
+[11:07:27] --- case "mutated" (dash-e57149d0-mutated) ---
+[11:08:03]   opened    FINALIZED SUCCESS
+[11:08:42]   submitted FINALIZED SUCCESS
+[11:08:42]   evaluating (real validators, real models) …
+[11:09:32]   judged    FINALIZED SUCCESS accepted in 17683 ms, finalized in 49925 ms
+[11:09:35]   VERDICT: INSUFFICIENT_EVIDENCE
+[11:09:35]     - P2 cites no evidence.
+[11:09:35]     - P3 cites E31, which is not in the evidence list.
+[11:09:39] balances after: {"client":"700","deliverer":"1","contract":"300"}
+[11:09:39] transcript written to transcripts/run-3-three-cases.json
+[11:09:39] RESULT as-written=REJECTED revised=REJECTED mutated=INSUFFICIENT_EVIDENCE
+[11:09:39] NOTE: the revised deliverable was not accepted — read the reasons above.
+EXIT=0

@@ -1,0 +1,17 @@
+{
+  "name": "agent-tank-brief-acceptance",
+  "version": "0.1.0",
+  "description": "Escrow released when a supervised agent's deliverable meets machine-readable terms, adjudicated on GenLayer.",
+  "scripts": {
+    "payloads": "node scripts/dash-brief-to-payload.mjs fixtures/dash-brief-competitor-scout.json > fixtures/payload-accepted.json && node scripts/dash-brief-to-payload.mjs fixtures/dash-brief-competitor-scout.json --correct > fixtures/payload-corrected.json && node scripts/dash-brief-to-payload.mjs fixtures/dash-brief-competitor-scout.json --mutate > fixtures/payload-mutated.json",
+    "studionet": "node scripts/studionet-run.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "genlayer-js": "^1.1.8"
+  },
+  "private": true
+}

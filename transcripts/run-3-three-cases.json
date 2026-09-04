@@ -1,0 +1,231 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "started_at": "2026-09-04T11:01:44.371Z",
+  "bounty": "100",
+  "steps": [
+    {
+      "label": "deploy",
+      "hash": "0x9fdc201701711197681c3f9772ae0208d505e85c158ef586174ebd36ed32faa5",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 14556,
+      "ms_to_finalized": 50254,
+      "leader_model": "llm-router/policy:prd-grok",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "open_commission:as-written",
+      "hash": "0x111a26dbc9e10847c08abbadb99bcb393b1ea8feda4b6a870255c8b63afd00bf",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 6716,
+      "ms_to_finalized": 38715,
+      "leader_model": "openrouter/openai/gpt-5.4",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "submit_deliverable:as-written",
+      "hash": "0xcbf89812b2fa7a9012b0764874c749faaa5fd9c9114ee195071b1c463fa9198f",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4725,
+      "ms_to_finalized": 37446,
+      "leader_model": "openrouter/openai/gpt-5.4",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "evaluate:as-written",
+      "hash": "0xa376ea39da4056f6f355b5e945cb916a00c4683e606f8542194223239ea03c97",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 26275,
+      "ms_to_finalized": 71117,
+      "leader_model": "llm-router/policy:prd-gpt-oss",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "open_commission:revised",
+      "hash": "0x3e6ea9726b8b84eb4eec8e299f1b998fb54ee641e9f674c1373b23ee7dc059fe",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 6715,
+      "ms_to_finalized": 38846,
+      "leader_model": "openrouter/openai/gpt-5.4",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "submit_deliverable:revised",
+      "hash": "0x2875620a48c769ddf90559c2934a4e8e802ac211e3627a0bb2e846c073810473",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 8934,
+      "ms_to_finalized": 41500,
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "evaluate:revised",
+      "hash": "0x6b50409a879f61a3620c99ac4a047c25fa505635a12691ea7b0eaf5f77a56d39",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 17515,
+      "ms_to_finalized": 49648,
+      "leader_model": "llm-router/policy:prd-sonnet",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      }
+    },
+    {
+      "label": "open_commission:mutated",
+      "hash": "0xa298377b62911573644f85db5164ac1a4d7837bae2a4d921f7e6d4cf25623214",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 6735,
+      "ms_to_finalized": 35631,
+      "leader_model": "llm-router/policy:prd-minimax",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "submit_deliverable:mutated",
+      "hash": "0xc3dedd88c926f3eb7ef0c344f2a9274c88b4cdb13bdb1a25c78d2fd390647846",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4627,
+      "ms_to_finalized": 37191,
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "evaluate:mutated",
+      "hash": "0x63604bbbc829ead8a25df0522a9e3fd02dc9d160bf207b7d9c7024a685c73452",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 17683,
+      "ms_to_finalized": 49925,
+      "leader_model": "llm-router/policy:prd-qwen",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 2
+      }
+    }
+  ],
+  "cases": {
+    "as-written": {
+      "commission_id": "dash-e57149d0",
+      "brief_digest": "5f35ae0c238951f78be7c85c5eb1aee408acc8526ed490eea0d6d522488f6328",
+      "deliverable_bytes": 21069,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "REJECTED",
+      "reasons": [
+        "P1 claim about heavy engagement (\"well over a thousand reactions and hundreds of comments each\") is not present in any cited evidence",
+        "Deliverable lacks subject headings; organization does not meet the required heading-per-subject structure"
+      ],
+      "judge_output": "{\"verdict\":\"REJECTED\",\"reasons\":[\"P1 claim about heavy engagement (\\\"well over a thousand reactions and hundreds of comments each\\\") is not present in any cited evidence\",\"Deliverable lacks subject headings; organization does not meet the required heading-per-subject structure\"]}",
+      "status": "rejected",
+      "leader_model": "llm-router/policy:prd-gpt-oss",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      },
+      "ms_to_accepted": 26275,
+      "ms_to_finalized": 71117,
+      "evaluate_tx": "0xa376ea39da4056f6f355b5e945cb916a00c4683e606f8542194223239ea03c97"
+    },
+    "revised": {
+      "commission_id": "dash-e57149d0-v2",
+      "brief_digest": "a607a85737c52033c48321fbeecc9788c30adf40a766677d7d686290a153da12",
+      "deliverable_bytes": 21260,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "REJECTED",
+      "reasons": [
+        "P1 claims engagement 'reaction counts ranging from roughly five hundred to thirteen hundred and hundreds of comments each', but none of the cited evidence (E1, E2, E3, E7) contains any reaction counts or comment numbers.",
+        "P1 states Anthropic reversed course 'later that month' (April), but E7 only says usage is allowed again without specifying when.",
+        "P2 describes OpenClaw as 'a renaming of a product previously called Moltbot', but E4's title 'OpenClaw – Moltbot Renamed Again' indicates Moltbot was renamed again to OpenClaw, not that OpenClaw was renamed from Moltbot."
+      ],
+      "judge_output": "{\"verdict\": \"REJECTED\", \"reasons\": [\"P1 claims engagement 'reaction counts ranging from roughly five hundred to thirteen hundred and hundreds of comments each', but none of the cited evidence (E1, E2, E3, E7) contains any reaction counts or comment numbers.\", \"P1 states Anthropic reversed course 'later that month' (April), but E7 only says usage is allowed again without specifying when.\", \"P2 describes OpenClaw as 'a renaming of a product previously called Moltbot', but E4's title 'OpenClaw – Moltbot Renamed Again' indicates Moltbot was renamed again to OpenClaw, not that OpenClaw was renamed from Moltbot.\"]}",
+      "status": "rejected",
+      "leader_model": "llm-router/policy:prd-sonnet",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      },
+      "ms_to_accepted": 17515,
+      "ms_to_finalized": 49648,
+      "evaluate_tx": "0x6b50409a879f61a3620c99ac4a047c25fa505635a12691ea7b0eaf5f77a56d39"
+    },
+    "mutated": {
+      "commission_id": "dash-e57149d0-mutated",
+      "brief_digest": "c5ef069697c2f7cd3f97c4e373e2da9646ec2eb76e81a5041a47a1a1e26f005d",
+      "deliverable_bytes": 21216,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "INSUFFICIENT_EVIDENCE",
+      "reasons": [
+        "P2 cites no evidence.",
+        "P3 cites E31, which is not in the evidence list."
+      ],
+      "judge_output": "{\n  \"verdict\": \"INSUFFICIENT_EVIDENCE\",\n  \"reasons\": [\n    \"P2 cites no evidence.\",\n    \"P3 cites E31, which is not in the evidence list.\"\n  ]\n}",
+      "status": "insufficient_evidence",
+      "leader_model": "llm-router/policy:prd-qwen",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 2
+      },
+      "ms_to_accepted": 17683,
+      "ms_to_finalized": 49925,
+      "evaluate_tx": "0x63604bbbc829ead8a25df0522a9e3fd02dc9d160bf207b7d9c7024a685c73452"
+    }
+  },
+  "accounts": {
+    "client": "0x00257d352389D7A6098dbD18636F04F241F90369",
+    "deliverer": "0x975Cab2654f896b47E6a7A0D67D3734e72cF5D0E"
+  },
+  "balances_before": {
+    "client": "1000",
+    "deliverer": "1"
+  },
+  "contract_address": "0x948aE88576ca72390dd02Fd0D76F374fB7ABB1a5",
+  "balances_after": {
+    "client": "700",
+    "deliverer": "1",
+    "contract": "300"
+  },
+  "total_ms": 474812,
+  "finished_at": "2026-09-04T11:09:39.183Z"
+}

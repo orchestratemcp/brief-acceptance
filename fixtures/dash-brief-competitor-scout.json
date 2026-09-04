@@ -1,0 +1,1028 @@
+{
+  "brief": {
+    "artifact_version": 2,
+    "agent": "competitor-scout",
+    "run_id": "e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+    "artifact_id": "brief-e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+    "kind": "brief",
+    "title": "Competitor brief — OpenClaw and Hermes Agent",
+    "generated_at": "2026-08-20T07:42:55.617Z",
+    "document": {
+      "sections": [
+        {
+          "heading": "OpenClaw subscription and access restrictions",
+          "paragraphs": [
+            {
+              "body": "Several reports describe major AI companies limiting how their subscription plans can be used with OpenClaw, a competing tool. Anthropic told Claude Code subscribers they could no longer use their subscription limits for third-party tools such as OpenClaw starting in early April, requiring a separate pay-as-you-go charge instead, though a later report says Anthropic reversed course and allowed OpenClaw-style Claude command line usage again later that month. Google was also reported to be restricting its AI Pro and Ultra subscribers from using OpenClaw. These posts drew very heavy engagement, with well over a thousand reactions and hundreds of comments each.",
+              "items": [
+                0,
+                1,
+                2,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "OpenClaw general reception",
+          "paragraphs": [
+            {
+              "body": "OpenClaw continues to generate strong and mixed discussion. Some posts praise it, including one saying it is what Apple's intelligence features should have been and another describing it as life changing for the user. Others raise concerns, including a report of a privilege escalation vulnerability and a post calling it a security risk disguised as something exciting. There is also confusion about its identity, with one post noting it is a renaming of a product previously called Moltbot, and another asking who actually uses it, with the poster noting that nobody in their own circle does despite feeling very engaged with the AI world.",
+              "items": [
+                3,
+                4,
+                5,
+                7,
+                8,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "OpenClaw feature requests",
+          "paragraphs": [
+            {
+              "body": "Users have asked for several practical improvements to OpenClaw. One request asks for a configurable timeout threshold for the streaming watchdog, since models that reason for a long time before responding can trigger false alarm warnings. Another asks for a denylist option for command approvals, so that most actions could be allowed automatically except for specifically risky ones like sending or deleting emails and messages. A further request asks for support for rendering mathematical formulas properly in the control interface, rather than showing raw formula code.",
+              "items": [
+                22,
+                23,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Hermes Agent product discussion",
+          "paragraphs": [
+            {
+              "body": "Hermes Agent, an open source AI agent with persistent memory, was discussed on Hacker News, along with a related post about adding Grafana-based observability tools for monitoring Hermes agents.",
+              "items": [
+                11,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Hermes Agent feature requests",
+          "paragraphs": [
+            {
+              "body": "A large number of feature requests have been submitted for Hermes Agent. Users want a way to use a Claude subscription as the model backend without paying twice, following a change where Anthropic is separating subscription usage from a new monthly credit system for developer tools starting in June 2026. Other requests include automatic backup and version control for the agent's stored data, support for an additional web search tool called Searxng, the ability to run the agent remotely while keeping tool execution on a local machine, support for Mistral as an additional model provider, and a more general way to connect Hermes with other coding assistant tools. Further requests ask for tiered permission levels so a shared Hermes assistant could restrict what different users are allowed to do, a native mobile app with voice calling, cloud syncing of settings and data across multiple devices, and a technical change to load tool information only when needed, in order to reduce processing time and cost.",
+              "items": [
+                10,
+                12,
+                13,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+              ]
+            }
+          ]
+        }
+      ],
+      "model": "anthropic/claude-sonnet-5"
+    },
+    "derived_from": {
+      "artifact_id": "digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+      "run_id": "e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+      "item_count": 53,
+      "items_digest": "adc107fc9862baa5954970870000e9423391c1d67bbcf44cf877b9fb1a0fa095"
+    }
+  },
+  "digest": {
+    "artifact_version": 1,
+    "agent": "competitor-scout",
+    "run_id": "e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+    "artifact_id": "digest-e57149d0-773b-49d3-bf1d-ee87b30b9d2e",
+    "kind": "digest",
+    "title": "Competitor briefing — OpenClaw and Hermes Agent",
+    "generated_at": "2026-08-20T07:42:38.125Z",
+    "sources_fetched": [
+      {
+        "source_name": "OpenClaw releases",
+        "source_url": "https://github.com/openclaw/openclaw/releases.atom",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:34.764Z",
+        "item_count": 10
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:35.501Z",
+        "item_count": 15
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:35.932Z",
+        "item_count": 15
+      },
+      {
+        "source_name": "OpenClaw on Reddit",
+        "source_url": "https://www.reddit.com/search.json?q=openclaw&sort=new&limit=15",
+        "status": "unreachable"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:37.123Z",
+        "item_count": 10
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:37.613Z",
+        "item_count": 15
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "status": "ok",
+        "fetched_at": "2026-08-20T07:42:37.972Z",
+        "item_count": 15
+      },
+      {
+        "source_name": "Hermes Agent on Reddit",
+        "source_url": "https://www.reddit.com/search.json?q=%22hermes%20agent%22&sort=new&limit=15",
+        "status": "unreachable"
+      }
+    ],
+    "items": [
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "Claude Code refuses requests or charges extra if your commits mention \"OpenClaw\"",
+        "item_url": "https://news.ycombinator.com/item?id=47963204",
+        "published_at": "2026-04-30T14:36:58Z",
+        "reactions": 1349,
+        "comments": 720,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+        "summary": "Received the following email from Anthropic: Hi, Starting April 4 at 12pm PT / 8pm BST, you’ll no longer be able to use your Claude subscription limits for third-party harnesses including OpenClaw. You can still use them with your Claude account, but they will require extra usage, a pay-as-you-go option billed separately from your subscription. Your subscription still covers all Claude products, including Claude Code and Claude Cowork. To keep using third-party harnesses with your Claude login, turn on extra usage for your account. This will be enforced April 4 starting with OpenClaw, but this policy applies to all third-party harnesses and will be rolled out to more shortly (read more). To … (trimmed)",
+        "item_url": "https://news.ycombinator.com/item?id=47633396",
+        "published_at": "2026-04-03T22:55:24Z",
+        "reactions": 1099,
+        "comments": 827,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "Google restricting Google AI Pro/Ultra subscribers for using OpenClaw",
+        "item_url": "https://news.ycombinator.com/item?id=47115805",
+        "published_at": "2026-02-22T23:07:55Z",
+        "reactions": 802,
+        "comments": 705,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "OpenClaw – Moltbot Renamed Again",
+        "item_url": "https://news.ycombinator.com/item?id=46820783",
+        "published_at": "2026-01-30T05:14:48Z",
+        "reactions": 667,
+        "comments": 382,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "OpenClaw is what Apple intelligence should have been",
+        "item_url": "https://news.ycombinator.com/item?id=46893970",
+        "published_at": "2026-02-05T00:28:06Z",
+        "reactions": 518,
+        "comments": 417,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "OpenClaw privilege escalation vulnerability",
+        "item_url": "https://news.ycombinator.com/item?id=47628608",
+        "published_at": "2026-04-03T16:21:32Z",
+        "reactions": 514,
+        "comments": 256,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+        "item_url": "https://news.ycombinator.com/item?id=47844269",
+        "published_at": "2026-04-21T03:43:03Z",
+        "reactions": 511,
+        "comments": 293,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "OpenClaw is a security nightmare dressed up as a daydream",
+        "item_url": "https://news.ycombinator.com/item?id=47479962",
+        "published_at": "2026-03-22T17:35:28Z",
+        "reactions": 397,
+        "comments": 297,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "Ask HN: Who is using OpenClaw?",
+        "summary": "I don't use it personally, and neither does anyone in my circle...even though I feel like I'm super plugged into the ai world",
+        "item_url": "https://news.ycombinator.com/item?id=47783940",
+        "published_at": "2026-04-15T19:22:10Z",
+        "reactions": 342,
+        "comments": 383,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=openclaw&tags=story&hitsPerPage=15",
+        "competitor": "OpenClaw",
+        "headline": "OpenClaw is changing my life",
+        "item_url": "https://news.ycombinator.com/item?id=46931805",
+        "published_at": "2026-02-08T06:21:27Z",
+        "reactions": 340,
+        "comments": 513,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "[Feature]: Claude Agent SDK model provider with subscription OAuth (Codex-style)",
+        "summary": "Problem or Use Case I want to run Hermes with Claude as the model backend while staying on my Claude subscription, but the existing anthropic provider requires a Developer Platform API key and bills separately — so Claude-subscribed users effectively pay twice (subscription + per-token API). Starting June 15, 2026, Anthropic decouples Agent SDK and claude -p usage from interactive subscription limits and introduces a separate monthly Agent SDK credit: | Plan | Monthly Agent SDK credit | |---|---| | Pro | $20 | | Max 5x | $100 | | Max 20x | $200 | | Team (Standard / Premium) | $20 / $100 | | Enterprise (usage-based / Premium seats) | $20 / $200 | The credit explicitly covers \"third-party … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/25267",
+        "published_at": "2026-05-13T22:29:06Z",
+        "reactions": 53,
+        "labels": [
+          "type/feature",
+          "comp/plugins",
+          "provider/anthropic",
+          "p3",
+          "needs-decision",
+          "area/billing"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Hermes Agent – Open-source AI agent with persistent memory",
+        "item_url": "https://news.ycombinator.com/item?id=48419000",
+        "published_at": "2026-06-05T22:09:38Z",
+        "reactions": 52,
+        "comments": 42,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "Feature Request: Built-in Automatic Backup & Version Control for Agent Data (~/.hermes/)",
+        "summary": "🗂️ Feature Request: Built-in Automatic Backup & Version Control Summary Add a native auto-backup mechanism and version control system for all Hermes agent data (memory, skills, conversation history, outputs) so users don't risk losing their agent's learned state, and can track how their agent evolved over time. Motivation Hermes stores valuable persistent data in ~/.hermes/ — including skill .md files, memory state, and conversation history. Currently there is no built-in way to back this up automatically or track changes over time. Users must manually set up cron jobs or third-party solutions, which is a barrier for non-developer users. Hermes' value compounds over time as it learns … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/12238",
+        "published_at": "2026-04-18T17:38:14Z",
+        "reactions": 36,
+        "labels": [
+          "type/feature",
+          "comp/cli",
+          "area/config",
+          "p3"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "[Feature]: Add Searxng as a default web search provider (alongside firecrawl, tavily, etc)",
+        "summary": "Problem or Use Case Add Searxng in webtools.py and in setup and env as an alternative to Firecrawl, Tavily, etc. I would love to add a reranker step as well, but I haven't started that project yet. Proposed Solution Modify webtools.py to include Searxng. In Backend Selection: def hassearxngconfig() -> bool: \"\"\"Return True when a SearXNG base URL is configured.\"\"\" return bool(os.getenv(\"SEARXNGBASEURL\", \"\").strip()) and def getbackend() -> str: \"\"\"Determine which web backend to use. Reads web.backend from config.yaml (set by hermes tools). Falls back to whichever API key is present for users who configured keys manually without running setup. \"\"\" configured = (loadwebconfig().get(\"backend\") … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/5941",
+        "published_at": "2026-04-07T21:15:33Z",
+        "reactions": 30,
+        "labels": [
+          "duplicate",
+          "type/feature",
+          "tool/web",
+          "p3"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Show HN: Grafana agent observability for Hermes Agent",
+        "item_url": "https://news.ycombinator.com/item?id=49318128",
+        "published_at": "2026-08-16T08:40:50Z",
+        "reactions": 28,
+        "comments": 0,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "Support remote Hermes agent with local tool execution",
+        "summary": "Problem I want to use a remote Hermes Agent instance while keeping tool execution on my local machine. Example: · Machine A: local client / workspace machine · Machine B: remote Hermes Agent with my existing skills, memory, sessions, and model/provider config Today, if Machine A points model.baseurl to Machine B's Hermes OpenAI-compatible API server, tool calls run on Machine B because the API server creates its own AIAgent. This is surprising because normal LLM providers return toolcalls to the client, and the client executes tools locally. For example: pwd should run on Machine A, where my current workspace lives, not on Machine B. Desired behavior I want a split-runtime mode: Remote … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/18715",
+        "published_at": "2026-05-02T07:27:37Z",
+        "reactions": 27,
+        "labels": [
+          "type/feature",
+          "comp/agent",
+          "comp/gateway",
+          "comp/tools",
+          "p2",
+          "needs-decision"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "[Feature]: Support for Mistral as LLM provider",
+        "summary": "Problem or Use Case Mistral is currently not among the providers natively supported by Hermes-Agent. It has a bigger user base than some of the already-supported providers, and its voice models are already integrated, so the LLMs shouldn't be too difficult to add. Proposed Solution Add Mistral to the list of existing LLM providers. API endpoint: Alternatives Considered Currently one can use Mistral with the \"custom provider\" option, which is less convenient Feature Type Configuration option Scope Small (single file, < 50 lines) Contribution · [ ] I'd like to implement this myself and submit a PR Debug Report (optional)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/20859",
+        "published_at": "2026-05-06T18:15:55Z",
+        "reactions": 26,
+        "labels": [
+          "type/feature",
+          "comp/cli",
+          "area/config",
+          "p3",
+          "needs-decision"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "feat: Generalized ACP client for multi-agent CLI orchestration",
+        "summary": "Summary Hermes currently supports ACP (Agent Client Protocol) as a server for IDE integration, and has a Copilot-specific ACP client (copilotacpclient.py). This proposal generalizes the ACP client to support all ACP-compatible coding agents, enabling Hermes to orchestrate: · Claude Code via @agentclientprotocol/claude-agent-acp · Codex CLI via @zed-industries/codex-acp · Gemini CLI via gemini --acp · + 11 more: Cursor, Copilot, Kiro, KiloCode, OpenCode, Kimi, Qwen, Cline, Amp, Droid, iFlow Approach Rather than invoking CLI binaries directly as subprocesses (the approach in #3660, which raised compliance concerns), this uses the official ACP adapters maintained by Zed Industries and the CLI … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/5257",
+        "published_at": "2026-04-05T17:06:59Z",
+        "reactions": 23,
+        "labels": [
+          "type/feature",
+          "innovation",
+          "comp/agent",
+          "comp/acp",
+          "needs-decision",
+          "p4"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "Feature: Gateway Permission Tiers — Role-Based Access Control (Owner/Admin/User/Guest) for Messenger Platforms",
+        "summary": "Overview Hermes Agent currently has a binary authorization model for gateway platforms: users are either fully authorized (all commands, all tools, full terminal access) or completely blocked. There is no concept of permission levels, roles, or per-user capability restrictions. This proposal introduces a tiered permission system (Owner → Admin → User → Guest) for the gateway/messenger platforms (Telegram, Discord, WhatsApp, Slack). Each tier gets a defined set of allowed commands, tools, and capabilities. This is essential for anyone running Hermes Agent as a shared service — e.g., a team lead who wants colleagues to use the agent for research/search but not have full terminal access to the … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/527",
+        "published_at": "2026-03-06T11:25:38Z",
+        "reactions": 22,
+        "labels": [
+          "type/feature",
+          "comp/gateway",
+          "area/auth",
+          "p2",
+          "needs-decision"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "[Feature Request] Native Mobile App (iOS & Android) with Voice Calling",
+        "summary": "Feature Description I'd love to see an official Hermes mobile app for both iOS and Android that supports voice calling — allowing users to have real-time phone conversations with their Hermes AI assistant. Motivation Voice communication is the most natural and hands-free way to interact with an AI assistant, especially for: · Quick questions while driving, cooking, or exercising · Users who prefer speaking over typing · Accessibility (visual impairments, difficulty typing) · Building a more personal, human-like connection with the assistant Proposed Solution A native mobile app (React Native or Flutter for cross-platform) that: 1. Voice Calls: Tap-to-call / always-listening wake word → … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/11911",
+        "published_at": "2026-04-18T02:19:26Z",
+        "reactions": 20,
+        "labels": [
+          "type/feature",
+          "p3",
+          "comp/desktop"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "Feature Request: Cloud Sync for All Hermes Configurations Across Devices",
+        "summary": "Feature Request: Cloud / Cross-Device Sync for Hermes Configuration Problem Currently, Hermes stores all configurations, profiles, skills, sessions, and memory locally under ~/.hermes/. There is no built-in way to sync these across multiple devices (PC, laptop, etc.). Users who work on multiple machines (e.g., desktop at home + laptop at work) have to manually export/import profiles, copy skills folders, and replicate setup on each device. Desired Behavior A built-in cloud sync feature that automatically synchronizes all Hermes data across devices, including: · Config — config.yaml, .env (with encrypted secrets) · Profiles — all profile directories · Skills — both hub-installed and … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/20510",
+        "published_at": "2026-05-06T02:49:23Z",
+        "reactions": 19,
+        "labels": [
+          "type/feature",
+          "area/config",
+          "p3",
+          "needs-decision"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3ANousResearch%2Fhermes-agent+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "Hermes Agent",
+        "headline": "Feature: Lazy Tool Schema Loading — Two-Pass Tool Injection to Reduce Token Overhead",
+        "summary": "Problem Every API call injects full tool schemas for ALL enabled toolsets. With 50+ tools across terminal, file, web, browser, delegate, vision, memory, and more, this consumes ~3,500-5,000 tokens per call — regardless of whether the conversation needs those tools. On local models, tool-formatted prompts are 10x slower to process than plain text (benchmarked: 1,230 tok/s vs 134 tok/s with 8 tools — see #5544). Even on cloud providers, this is wasted tokens at scale. For simple conversational turns (\"hi\", \"what model are you using?\"), the model doesn't need to know about browserclick or webcrawl or delegatetask. But it gets all of them anyway. Proposed Solution Two-pass lazy tool loading: … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/issues/6839",
+        "published_at": "2026-04-09T22:38:12Z",
+        "reactions": 18,
+        "labels": [
+          "type/feature",
+          "comp/agent",
+          "comp/tools",
+          "tool/mcp",
+          "p2",
+          "needs-decision",
+          "area/usage-cost"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Feature Request: Configurable streaming watchdog timeout threshold",
+        "summary": "Problem Description When using models that perform extended reasoning/thinking (e.g., kimi-k2.5, DeepSeek-R1), the streaming watchdog frequently triggers warnings: streaming watchdog: no stream updates for 30s; resetting status. The backend may have dropped this run silently — send a new message to resync. This 30-second threshold appears to be hardcoded in the client UI and cannot be configured server-side. Impact 1. False positives during legitimate reasoning: Models like kimi-k2.5 may legitimately spend 30-60+ seconds in deep thinking phases before producing output. The watchdog warning creates unnecessary alarm for users. 2. User experience disruption: The warning message implies … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/68596",
+        "published_at": "2026-04-18T14:23:18Z",
+        "reactions": 14,
+        "labels": [
+          "p2",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:source-repro",
+          "issue-rating: 🦞 diamond lobster",
+          "impact:ux-friction"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Feature: Add denylist support for exec-approvals",
+        "summary": "Summary Add denylist support to exec-approvals, complementing the existing allowlist. This enables \"allow everything except X\" policies. Use Case I want to: · Allow all commands to run without prompts · Except block/prompt for specific dangerous commands like: · gog gmail send (sending emails) · gog gmail delete (deleting emails) · beeper-send.sh (sending messages) Currently, exec-approvals only supports: · security: \"deny\" - block all · security: \"allowlist\" - allow only listed commands · security: \"full\" - allow everything There's no way to say \"allow everything except these specific patterns.\" Proposed Solution Add a denylist array to exec-approvals config: { \"defaults\": { \"security\": … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/6615",
+        "published_at": "2026-02-01T21:42:36Z",
+        "reactions": 12,
+        "labels": [
+          "enhancement",
+          "p2",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:linked-pr-open",
+          "impact:security",
+          "issue-rating: 🌊 off-meta tidepool"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Feature Request: Add MathJax/LaTeX Support to Control UI",
+        "summary": "🎯 Feature Request Add MathJax/LaTeX rendering support to the OpenClaw Control UI for displaying mathematical formulas. 📖 Motivation As an AI assistant using OpenClaw, I frequently need to communicate mathematical and scientific content to users. Currently, LaTeX formulas are displayed as raw source code (e.g., $FoM = \\frac{S}{FWHMn + FWHM\\gamma}$) instead of rendered equations. Use Cases 1. Scientific papers analysis - Reading papers with equations 2. Math/Physics explanations - Teaching or explaining technical concepts 3. Engineering discussions - Sharing formulas and calculations 4. Data science reports - Displaying statistical equations 💡 Proposed Solution Option A: … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/42840",
+        "published_at": "2026-03-11T05:26:07Z",
+        "reactions": 11,
+        "labels": [
+          "p3",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:source-repro",
+          "issue-rating: 🦞 diamond lobster",
+          "impact:ux-friction"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Support for Telegram bot-to-bot and guest-bot modes (Telegram May-7 2026 release)",
+        "summary": "Background Telegram released two new bot platform features on 2026-05-07: · Guest Bots (spec) · Bot-to-Bot Communication (spec) Announcement: telegram.org/blog/ai-bot-rev. Once a bot owner enables \"Bot to Bot Communication Mode\" in @BotFather's MiniApp, the bot's existing getUpdates long-poll begins receiving Update objects whose message.from.isbot=true. Today openclaw treats those identically to human-sourced messages — they pass through the standard allowlist check (if the sending bot's user-ID is in channels.telegram.accounts. .allowFrom, the agent will respond) with no awareness that the sender is a peer bot. This is related to but distinct from prior issues: · #39402 (closed) and … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/79077",
+        "published_at": "2026-05-07T20:13:45Z",
+        "reactions": 10,
+        "labels": [
+          "p2",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:needs-live-repro",
+          "impact:session-state",
+          "impact:security",
+          "impact:message-loss",
+          "issue-rating: 🐚 platinum hermit"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Tooling Up Hermes Agent",
+        "item_url": "https://news.ycombinator.com/item?id=47945426",
+        "published_at": "2026-04-29T08:05:53Z",
+        "reactions": 9,
+        "comments": 0,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "sandbox: keep workspaceAccess none workspaces writable",
+        "summary": "Summary When agents.defaults.sandbox.workspaceAccess is set to \"none\", OpenClaw gives each sandboxed session its own isolated workspace under ~/.openclaw/sandboxes/..., which matches the expected isolation model. However, that isolated /workspace ends up mounted read-only, so tools that need to write inside the sandbox workspace stop working. This makes \"none\" behave closer to \"ro\" in practice, even though the agent workspace is still intentionally hidden. Expected behavior workspaceAccess: \"none\" should mean: · the main agent workspace is not mounted into the sandbox · each sandboxed session gets an isolated workspace under ~/.openclaw/sandboxes/... · that isolated sandbox workspace is … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/37634",
+        "published_at": "2026-03-06T10:26:05Z",
+        "reactions": 9,
+        "labels": [
+          "p1",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:fix-shape-clear",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:source-repro",
+          "impact:session-state",
+          "impact:security",
+          "issue-rating: 🦞 diamond lobster"
+        ],
+        "kind": "issue",
+        "signal": "unsorted"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Theme Customization System — Preset Themes + Custom Theme Studio",
+        "summary": "Summary Add a theme customization system to the Control UI: 6 curated preset themes + a Custom Theme Studio with hue-based color generation, dark/light mode, gradient accents, and per-variable color overrides. This addresses the feedback from #28048 — instead of fixed themes, users can customize their own colors. Problem to solve The current theme system only supports System / Light / Dark. Users have no way to personalize the UI appearance. As noted in #28048, user-customizable colors are preferred over fixed presets. Proposed solution Proposed solution Two-layer approach: 1. 6 Preset Themes (Ocean, Spring, Sunset, Forest, Purple, Mocha) — curated color schemes as starting points, each … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/28300",
+        "published_at": "2026-02-27T04:47:30Z",
+        "reactions": 9,
+        "labels": [
+          "enhancement",
+          "p3",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "issue-rating: 🌊 off-meta tidepool",
+          "impact:other"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Nous Research edits GitHub issue to remove plagiarism claims about Hermes Agent",
+        "item_url": "https://news.ycombinator.com/item?id=48187581",
+        "published_at": "2026-05-19T00:03:48Z",
+        "reactions": 8,
+        "comments": 1,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "Feature Request: Per-agent dreaming configuration",
+        "summary": "Problem Statement Currently, memory-core dreaming runs on all agent workspaces simultaneously during a single scheduled cron job. This causes: 1. Memory spikes: All workspaces dreaming at once can exceed MemoryMax (6GB) and trigger OOM kills 2. No per-agent control: Cannot disable dreaming for specific agents that don't need it 3. No schedule flexibility: All agents share one cron expression (default: 0 3 ) Proposed Solution Add per-agent dreaming configuration options: 1. Enable/Disable dreaming per agent { \"agents\": { \"list\": [ { \"id\": \"explore\", \"dreaming\": { \"enabled\": false } }, { \"id\": \"oracle\", \"dreaming\": { \"enabled\": false } } ] } } 2. Custom schedule per agent { \"agents\": { … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/67413",
+        "published_at": "2026-04-15T22:28:12Z",
+        "reactions": 8,
+        "labels": [
+          "p2",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-live-repro",
+          "impact:crash-loop",
+          "issue-rating: 🐚 platinum hermit"
+        ],
+        "kind": "issue",
+        "signal": "anger"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "[Bug]: Bootstrap files in agentDir are silently ignored — only workspace directory files are injected into system prompt",
+        "summary": "Summary When per-agent agentDir is configured (e.g. ~/.openclaw/agents/main/agent/), placing bootstrap .md files (SOUL.md, AGENTS.md, TOOLS.md, USER.md) inside that directory has no effect. Only files under the shared workspace directory (~/.openclaw/workspace/) are loaded into the system prompt. There is no warning or error when bootstrap-named files exist in agentDir but are not loaded. This is especially dangerous for security-critical rules placed in AGENTS.md — users may believe their safety constraints are active when they are silently ignored. Steps to reproduce 1. Configure a multi-agent setup with per-agent directories: { \"agents\": { \"defaults\": { \"workspace\": … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/29387",
+        "published_at": "2026-02-28T03:31:08Z",
+        "reactions": 7,
+        "labels": [
+          "bug",
+          "p1",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:source-repro",
+          "impact:session-state",
+          "impact:security",
+          "issue-rating: 🦞 diamond lobster"
+        ],
+        "kind": "issue",
+        "signal": "anger"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "[Feature]: `announceTarget` option for sub-agent completion announce routing",
+        "summary": "Summary Allow sub-agent completion announces to route to the parent session as a user-message trigger instead of directly to the channel, enabling the main agent to orchestrate multi-step workflows. Problem to solve When a sub-agent spawned via sessionsspawn completes, the completion announce is dispatched directly to the channel as a delivery-mirror assistant message. The parent (main) agent session does not receive this announce as a triggering event and cannot react to it. This means the main agent cannot orchestrate multi-step workflows where it needs to: · Review the sub-agent's output before presenting it to the user · Decide the next step based on results (e.g., spawn another agent, … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/27445",
+        "published_at": "2026-02-26T10:39:02Z",
+        "reactions": 7,
+        "labels": [
+          "enhancement",
+          "p1",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:linked-pr-open",
+          "impact:session-state",
+          "impact:security",
+          "issue-rating: 🌊 off-meta tidepool"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "OpenClaw issues people react to",
+        "source_url": "https://api.github.com/search/issues?q=repo%3Aopenclaw%2Fopenclaw+is%3Aissue+is%3Aopen&sort=reactions&order=desc&per_page=15",
+        "competitor": "OpenClaw",
+        "headline": "[Feature]: Telegram Business Bot support (business_message / business_connection updates)",
+        "summary": "Summary Enable OpenClaw bots to receive messages from Telegram Business-connected personal chats by subscribing to businessmessage and businessconnection update types. Problem to solve When a bot has Business Mode enabled via BotFather and is connected through Telegram Business (Settings → Telegram Business → Chatbots), it should receive messages from personal chats. Currently OpenClaw does not include businessconnection or businessmessage in allowedupdates, so Telegram rejects the bot with \"Este bot ainda não é compatível com o Telegram Business.\" The feature is entirely unusable regardless of BotFather configuration. Proposed solution In resolveTelegramAllowedUpdates(), add … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/issues/20786",
+        "published_at": "2026-02-19T09:24:31Z",
+        "reactions": 7,
+        "labels": [
+          "enhancement",
+          "p2",
+          "clawsweeper:no-new-fix-pr",
+          "clawsweeper:needs-maintainer-review",
+          "clawsweeper:needs-product-decision",
+          "clawsweeper:needs-security-review",
+          "clawsweeper:linked-pr-open",
+          "clawsweeper:needs-live-repro",
+          "impact:security",
+          "impact:message-loss",
+          "issue-rating: 🐚 platinum hermit"
+        ],
+        "kind": "issue",
+        "signal": "ask"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Hermes Agent can now /learn from anything",
+        "item_url": "https://news.ycombinator.com/item?id=48653666",
+        "published_at": "2026-06-24T00:42:03Z",
+        "reactions": 6,
+        "comments": 1,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Show HN: OpenClaw and Hermes Agent call each other via XMPP",
+        "summary": "OpenClaw Hermes AI Agent Social Network.Built on Google 3D Maps and A2A protocol, connects OpenClaw and Hermes agents worldwide in a 3D environment. They can Make friends and even date other Agents. Earn money and make a living. Create their own organizations or form alliances. Explore the world and discover treasures. Find place interesting. Compete or collaborate with others.",
+        "item_url": "https://news.ycombinator.com/item?id=48473221",
+        "published_at": "2026-06-10T08:30:11Z",
+        "reactions": 5,
+        "comments": 2,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Hermes Agent is now natively supported on Windows",
+        "item_url": "https://news.ycombinator.com/item?id=48352588",
+        "published_at": "2026-06-01T04:26:08Z",
+        "reactions": 5,
+        "comments": 1,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Hermes Agent: The self-improving open source AI agent Complete Guide for 2026",
+        "item_url": "https://news.ycombinator.com/item?id=47644400",
+        "published_at": "2026-04-04T22:57:12Z",
+        "reactions": 5,
+        "comments": 1,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "Hermes Agent by Nous Research",
+        "item_url": "https://news.ycombinator.com/item?id=47630901",
+        "published_at": "2026-04-03T19:17:48Z",
+        "reactions": 5,
+        "comments": 0,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent on Hacker News",
+        "source_url": "https://hn.algolia.com/api/v1/search?query=%22hermes%20agent%22&tags=story&hitsPerPage=15",
+        "competitor": "Hermes Agent",
+        "headline": "NousResearch/hermes-agent: The agent that grows with you",
+        "item_url": "https://news.ycombinator.com/item?id=47264225",
+        "published_at": "2026-03-05T17:08:51Z",
+        "reactions": 4,
+        "comments": 3,
+        "kind": "discussion",
+        "signal": "discussed"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.20.4 (2026.8.18)",
+        "summary": "Hermes Agent v0.20.4 (v2026.8.18) Release Date: August 18, 2026 Patch release. This tag rolls up the ~74 PRs merged since v0.20.3 into a stable tagged release for downstream consumers (Docker images, hosted deployments, fresh installs). About this release Since v0.20.3 (v2026.8.16.2, tagged August 17), this window landed ~146 commits across ~265 files (+21,697 / −2,217) — ~74 merged PRs including the desktop glass/translucency surface work (matte glass, frost picker, macOS pre-select), the tabbed SESSIONS|BOTS sidebar with per-bot hide/unhide, Bot Mode group-chat fixes (long-running member turns, Markdown rendering, cross-machine routing), NVIDIA SkillEvaluator Tier 1 advisory scanning on … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.18",
+        "published_at": "2026-08-18T07:26:46.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.20.3 (2026.8.16.2)",
+        "summary": "Hermes Agent v0.20.3 (v2026.8.16.2) Release Date: August 16, 2026 Patch release. This tag rolls up the ~125 PRs merged since v0.20.2 into a stable tagged release for downstream consumers (Docker images, hosted deployments, fresh installs). About this release Since v0.20.2 (v2026.8.16, tagged earlier today), this window landed ~250 commits across ~461 files (+42,613 / −1,641) — ~125 merged PRs including the MCP 2.x SDK migration and 2026-07-28 stateless protocol support, the bundled Bot Mode (hermes-bots) plugin with the core teammate protocol, the CommandCode provider plugin, subprocess Python runtime ownership hardening (PYTHONHOME/PYTHONPATH isolation), Cua Driver 0.20 runtime contracts … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2",
+        "published_at": "2026-08-17T18:43:27.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.20.2 (2026.8.16)",
+        "summary": "Hermes Agent v0.20.2 (v2026.8.16) Release Date: August 16, 2026 Patch release. This tag rolls up the ~397 PRs merged since v0.20.1 into a stable tagged release for downstream consumers (Docker images, hosted deployments, fresh installs). About this release Since v0.20.1 (v2026.8.13, tagged August 13), this window landed ~967 commits across ~1,279 files (+128,522 / −7,622) — ~397 merged PRs of fixes and improvements spanning the desktop app (multi-gateway Connections registry, profile-scoped refreshes, MCP health checks and deep links), the CLI (Windows update probes, Kitty keyboard protocol, chat -c hardening), the gateway (persisted model routes, /loop completion, Telegram DM topics), … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16",
+        "published_at": "2026-08-16T17:33:22.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "OpenClaw releases",
+        "source_url": "https://github.com/openclaw/openclaw/releases.atom",
+        "competitor": "OpenClaw",
+        "declared_signal": "shipped",
+        "headline": "OpenClaw 2026.8.1-beta.2",
+        "summary": "2026.8.1 Highlights Secret egress host binding: bind each shared-store secret to exact HTTPS destination hosts across CLI, Gateway RPC, and Control UI so unbound sentinel substitution fails closed before plaintext egress. Thanks @shakkernerd . GPT-5.6 Ultra and runtime switching: support Sol, Terra, and Luna across OpenClaw and Codex engines; keep model, runtime, and thinking selection atomic through /model and fallback; and add live matrix coverage for both harnesses. Thanks @anyech and @vincentkoc . Channel plugin ingress monitors: add a shared plugin SDK monitor for durable admission, polling, pruning, claim identity validation, adoption handoff, and shutdown, and migrate IRC, Synology … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2",
+        "published_at": "2026-08-15T08:35:55.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.20.1 (2026.8.13)",
+        "summary": "Hermes Agent v0.20.1 (v2026.8.13) Release Date: August 13, 2026 Patch release. This tag rolls up the ~656 PRs merged since v0.20.0 into a stable tagged release for downstream consumers (Docker images, hosted deployments, and anyone installing from the latest tag). About this release Since v0.20.0 (August 3), this window landed 1,444 commits across ~656 merged PRs , touching 2,172 files (+233,872 / −75,244), and closed ~481 issues . It is a broad stabilization-and-fixes rollup spanning the desktop app, gateway platforms, installers, tool system, and provider catalogs. Full curated release notes for this window will ship with v0.21.0 , which will document everything from v0.20.0 onward — … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.13",
+        "published_at": "2026-08-13T20:37:37.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "OpenClaw releases",
+        "source_url": "https://github.com/openclaw/openclaw/releases.atom",
+        "competitor": "OpenClaw",
+        "declared_signal": "shipped",
+        "headline": "openclaw 2026.7.1-2",
+        "summary": "Fixes npm plugin updates: accept singleton-array metadata from newer npm clients so tracked official plugins can install and update to correction releases. ( #108336 )",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2",
+        "published_at": "2026-08-04T00:41:26.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "OpenClaw releases",
+        "source_url": "https://github.com/openclaw/openclaw/releases.atom",
+        "competitor": "OpenClaw",
+        "declared_signal": "shipped",
+        "headline": "openclaw 2026.7.1-1",
+        "summary": "Fixes Codex progress replies: keep app-server turns running after delivered progress messages so GPT/Codex reaches its authoritative terminal response instead of stopping mid-turn. ( #106961 , #108487 ) Thanks @joshavant . Memory Core startup repair: recover derived legacy-index and cache-sidecar conflicts without trapping the Gateway in a fatal restart loop, while keeping structural vector-store corruption retryable. ( #107220 , #108652 ) Thanks @goutam-adwant. WSL state permissions: tolerate EROFS from guarded chmod operations only when the existing state path is already private, preserving fail-closed handling for broad permissions. ( #108250 , #108258 ) Legacy migration recovery: keep … (trimmed)",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-1",
+        "published_at": "2026-08-04T00:41:25.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.20.0 (2026.8.3)",
+        "summary": "Hermes Agent v0.20.0 (v2026.8.3) Release Date: August 3, 2026 Since v0.19.0: ~3,650 commits · ~1,400 merged PRs · ~5,200 files changed · ~559,000 insertions · ~405,000 deletions · ~1,200 issues closed · 650+ contributors The Herald Release. Hermes is the herald of the gods, and this release makes him one in earnest: he speaks (real-time conversational voice with streaming TTS, barge-in, on-device wake words, and hands-free control across the CLI, desktop, and every audio-capable gateway platform), he carries word to other agents (A2A v1.0), he announces events to your systems (signed outbound webhooks), and he cites his sources (grounded research with verifiable citations and … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3",
+        "published_at": "2026-08-03T16:57:52.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.19.1 (v2026.7.30)",
+        "summary": "Hermes Agent v0.19.1 (v2026.7.30) Release Date: July 30, 2026 Patch release. This tag rolls up the ~1,000+ PRs merged since v0.19.0 into a stable tagged release for downstream consumers (Docker images, hosted deployments, fresh installs). About this release Since v2026.7.20 (v0.19.0, July 20): ~2,789 commits · ~4,748 files changed · ~442,000 insertions · ~392,300 deletions on main . This window is dominated by bug-fix and salvage waves across the gateway, voice subsystem, desktop app, and installer, plus continued platform work (Buzz/Nostr channel, FLUX3 video generation and delivery, Telegram media reliability, voice-mode regressions). Full curated release notes for this window will ship … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30",
+        "published_at": "2026-07-30T23:45:37.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.19.0 (2026.7.20) — The Quicksilver Release",
+        "summary": "Hermes Agent v0.19.0 (v2026.7.20) Release Date: July 20, 2026 Since v0.18.0: ~2,245 commits · ~1,065 merged PRs · ~2,465 files changed · ~300,000 insertions · ~36,000 deletions · ~3,300 issues closed · 450+ community contributors The Quicksilver Release. Hermes is the messenger god, and this window we made him move like it. First-turn time-to-first-token dropped ~80% on every platform , reasoning streams live by default, the desktop app got a ~20-PR speed overhaul (14× faster streaming markdown, virtualized diffs, snappy session switching), and the TUI renders markdown incrementally. Around that speed spine: you can now manage your Nous subscription without leaving the terminal , plug … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20",
+        "published_at": "2026-07-20T18:44:28.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.18.2 (2026.7.7.2)",
+        "summary": "Hermes Agent v0.18.2 (v2026.7.7.2) Release Date: July 7, 2026 Same-day patch on top of v0.18.1, picking up the WhatsApp Baileys dependency fix needed for tagged-release Docker builds. What's in this patch fix(whatsapp): unpin Baileys from git commit, use published 7.0.0-rc13 ( #60643 ) — the WhatsApp bridge dependency now installs from the published npm release instead of a pinned git commit, making installs and Docker image builds reliable. Full curated release notes for the entire post-v0.18.0 window ship with v0.19.0. Updating hermes update # existing installs pip install -U hermes-agent Full Changelog : v2026.7.7...v2026.7.7.2",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7.2",
+        "published_at": "2026-07-08T03:13:14.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.18.1 (2026.7.7)",
+        "summary": "Hermes Agent v0.18.1 (v2026.7.7) Release Date: July 7, 2026 Patch release. This tag rolls up the ~660 PRs merged since v0.18.0 (July 1) — bug fixes, hardening, and in-progress feature work — into a stable tagged release for downstream consumers (Docker images, hosted deployments, PyPI installs). About this release This is an infrastructure-driven patch tag rather than a fully curated release. Since v0.18.0 shipped six days ago, main has accumulated roughly 667 commits across ~990 files (+89.5k/−10.4k lines) , including installer/updater self-healing on Windows, dashboard and gateway fixes, WhatsApp dashboard pairing, MCP and provider fixes, and a large volume of stability work. Full curated … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7",
+        "published_at": "2026-07-08T01:16:58.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      },
+      {
+        "source_name": "Hermes Agent releases",
+        "source_url": "https://github.com/NousResearch/hermes-agent/releases.atom",
+        "competitor": "Hermes Agent",
+        "declared_signal": "shipped",
+        "headline": "Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release",
+        "summary": "Hermes Agent v0.18.0 (v2026.7.1) Release Date: July 1, 2026 Since v0.17.0: ~1,720 commits · 998 merged PRs · 2,215 files changed · ~251,000 insertions · ~41,000 deletions · 949 issues closed · 370+ community contributors The Judgment Release. Over the last week and a half the team put nearly all of its effort into one goal: resolve every P0 and P1 issue and PR in the entire Hermes Agent repo — and as of this release, 100% of them are closed. Zero open P0s. Zero open P1s. That's ~700 highest-priority items cleared as part of ~1,950 total issues and PRs closed this window. We intend to keep P0/P1 at zero from here on. On top of that clean-sweep, v0.18.0 is about how well Hermes thinks and how … (trimmed)",
+        "item_url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.1",
+        "published_at": "2026-07-01T20:14:16.000Z",
+        "kind": "release",
+        "signal": "shipped"
+      }
+    ],
+    "set_aside": [
+      {
+        "headline": "pr-124528-profiles",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/pr-124528-profiles"
+      },
+      {
+        "headline": "release-publish/abd63c06c2f5-1786646045",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Fabd63c06c2f5-1786646045"
+      },
+      {
+        "headline": "release-publish/57fabb2c9c35-1786621048",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F57fabb2c9c35-1786621048"
+      },
+      {
+        "headline": "release-publish/8371831eba5e-1786610071",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F8371831eba5e-1786610071"
+      },
+      {
+        "headline": "release-publish/716f996be8db-1786550775",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F716f996be8db-1786550775"
+      },
+      {
+        "headline": "v2026.8.1-beta.1",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.1"
+      },
+      {
+        "headline": "release-publish/f4987deb94b8-1786361493",
+        "competitor": "OpenClaw",
+        "item_url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Ff4987deb94b8-1786361493"
+      }
+    ],
+    "items_found": 53,
+    "items_set_aside": 7,
+    "sources_ok": 6,
+    "deep_dive": {
+      "state": "not_written",
+      "reason": "refused",
+      "competitor": "OpenClaw"
+    },
+    "report_file": {
+      "state": "saved",
+      "detail": "The briefing was saved into this agent's reports folder.",
+      "file_name": "briefing-2026-08-20T07-42-38-125Z.md"
+    }
+  }
+}

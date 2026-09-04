@@ -1,0 +1,9 @@
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.gltest_cache/
+artifacts/
+transcript-studionet.json
+*.pyc
+.env
