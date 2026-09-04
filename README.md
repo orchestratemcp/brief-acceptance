@@ -413,7 +413,7 @@ overruled the leader's verdict outright, so the transaction finalized and applie
 no state. Full transcripts with transaction hashes are in the repo.
 
 **Links:**
-- Repo: `https://github.com/orchestratemcp/<repo name>` (public)
+- Repo: https://github.com/orchestratemcp/brief-acceptance (public)
 - Explorer: `https://explorer-studio.genlayer.com`
 - Demo video: *(session 3)*
 
