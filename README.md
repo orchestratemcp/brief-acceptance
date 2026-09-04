@@ -87,15 +87,47 @@ the rendered case file dropped. The reaction counts, then the section headings,
 then the rest of the evidence row. Once the case file showed the whole row, the
 same brief was accepted.
 
-**One honest caveat, stated plainly: the accepted verdict has one live run behind
-it, not ten.** The brief's P1 says the cited posts drew "well over a thousand
-reactions and hundreds of comments each"; the four rows carry 1349, 1099, 802 and
-511. Two of them are not over a thousand. A judge that reads "each" strictly
-should reject that sentence, and earlier judges did. Whether the accepted verdict
-holds across models and runs is **unmeasured**, and measuring it is the first
-thing session 3 should do. `fixtures/payload-corrected.json` exists for this
-reason — it is the same brief with that sentence brought into line with the
-counts, ready to submit if the marginal claim proves unstable.
+### 3. How stable is that verdict? Measured: 8 / 1 / 1
+
+The obvious objection to a single accepted run is that an LLM committee might
+say anything. So the identical case file, with identical terms, was judged **ten
+times** on one contract (`0xD08455a5Cfc53E43731834d6C92a6FE4aA0b3B75`,
+`transcripts/stability.json`). Nothing varied but the validators and models the
+network assigned.
+
+| Outcome | Count |
+|---|---|
+| ACCEPTED | **8** |
+| REJECTED | 1 |
+| No verdict (MAJORITY_DISAGREE, no state applied) | 1 |
+
+Ten different leader assignments across kimi, gemma, mistral, gemini-3-flash,
+sonnet, gpt-oss, gemini and claude-sonnet-4.6. Read it as three separate facts:
+
+**The verdict is directional, not deterministic.** Eight in ten is a strong
+signal and it is not a guarantee. The same model, kimi, rejected on run 3 and
+accepted on run 9, so this is not even stable per model.
+
+**The one rejection was defensible and it found a *different* sentence.** Not the
+engagement numbers this time. It objected that P1's "Anthropic reversed course"
+is an interpretation of E7's headline rather than something E7 states: *"there is
+no explicit statement of 'reversed course' … in the cited evidence."* That is
+strict, and it is not wrong. The brief has more than one sentence sitting on the
+line, which is the honest finding.
+
+**One judgement in ten produced no verdict at all.** The committee voted the
+leader down and the commission stayed at `submitted`. This is not an error state
+to be engineered away; it is the protocol refusing to settle, and any product
+built on this needs a resubmit-or-appeal path rather than a spinner.
+
+Validator dissent was routine: five of the ten committees carried at least one
+disagree vote even while reaching MAJORITY_AGREE.
+
+**What this means for the demo.** Showcase `fixtures/payload-corrected.json`, not
+the brief as written. The corrected deliverable removes the marginal engagement
+claim, and the same discipline should be applied to the "reversed course"
+sentence before filming. An 80% verdict is a great finding to *talk about* and a
+poor thing to *depend on* live.
 
 ---
 
@@ -302,14 +334,19 @@ be FINALIZED, with SUCCESS execution, and apply no state, because consensus was
 MAJORITY_DISAGREE. `applied()` in `scripts/lib/studio.mjs` is the three-part
 check. Anything driving GenLayer needs it before it needs anything else.
 
-**8. Verdict stability is unmeasured, and one claim sits on the line.** The same
-brief was rejected by three judges and accepted by a fourth. Most of that is
-explained — the first three were shown an incomplete case file — but the
-sentence at issue is genuinely marginal ("well over a thousand … each" over rows
-carrying 1349, 1099, 802, 511), and a strict reading should still reject it. One
-accepted run is not a measurement. Before the demo, run the same case file ten
-times and count. If it splits, showcase the corrected deliverable instead; it is
-already built.
+**8. Verdict stability is 80%, and one run in ten returns nothing.** Measured, not
+guessed: ten judgements of the identical case file gave 8 ACCEPTED, 1 REJECTED, 1
+no-verdict. See "How stable is that verdict?" above. Two consequences for anyone
+building on this. A borderline claim will flip, so terms and deliverables have to
+be written to sit clearly inside the evidence rather than at its edge. And a
+judgement that applies no state is a normal outcome at roughly one in ten, so the
+calling application needs a resubmit path, not a retry loop that assumes an
+answer is coming.
+
+**8b. Judgement latency is wildly variable.** Across those ten, `evaluate` took
+between **16 and 249 seconds** to reach accepted, and between 45 and 281 seconds
+to finalize. The whole ten-judgement run took 30 minutes. Budget for the tail,
+not the median, and never demo against a fixed timeout.
 
 **9. Not done tonight, and it should be said:** no appeal was filed, so the
 appeal economics and the recomputation path are unexercised — which matters more
@@ -361,9 +398,9 @@ makes it a *pattern* rather than one app's feature — and the MCP's own CI gate
 already checks the DASH vocabulary, so the component's language stays honest.
 
 **Session 3 — the demo and the entry.**
-First: re-run the three cases against the current contract and record the
-address in this README, closing the one gap above. Then record the video, write
-the portal application, submit. Video script below. Budget a full session — the
+First: tighten the showcase deliverable so no sentence sits on the evidence's
+edge, then re-run the three cases and record the address. Then record the video,
+write the portal application, submit. Video script below. Budget a full session — the
 run takes 6–10 minutes of wall clock, Studio's speed varies by an order of
 magnitude, and the narration is the deliverable. Add an appeal to the demo if
 session 2 finishes early: a wrong verdict being overturned on chain is a better

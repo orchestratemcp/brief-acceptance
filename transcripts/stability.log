@@ -1,0 +1,37 @@
+[11:55:40] account 0x24ceddddd4a05978C65021075F3E3f164d6E705C
+[11:55:40] deploying …
+[11:56:18] deployed at 0xD08455a5Cfc53E43731834d6C92a6FE4aA0b3B75
+[11:59:25] 1/10 ACCEPTED | MAJORITY_AGREE | {"disagree":2,"agree":3} | llm-router/policy:prd-gpt-oss
+[12:04:26] 2/10 ACCEPTED | MAJORITY_AGREE | {"agree":3,"disagree":1,"idle":1} | llm-router/policy:prd-gemma
+[12:05:32] 3/10 REJECTED | MAJORITY_AGREE | {"idle":1,"agree":3,"disagree":1} | llm-router/policy:prd-kimi
+[12:05:32]       - P1 claims Anthropic's restriction started 'in early April' and that Google was restricting 'AI Pro and Ultra subscribers', but E2 states enforcement s
+[12:05:32]       - P2 cites E4, E5, E6, E8, E9, E10 and claims 'one post saying it is what Apple's intelligence features should have been' but E5's title is 'OpenClaw is
+[12:05:32]       - P5 cites E11 and claims 'Anthropic is separating subscription usage from a new monthly credit system for developer tools starting in June 2026'. E11 s
+[12:08:20] 4/10 ACCEPTED | MAJORITY_AGREE | {"idle":2,"agree":3} | llm-router/policy:prd-mistral
+[12:12:07] 5/10 ACCEPTED | MAJORITY_AGREE | {"agree":3,"idle":2} | openrouter/google/gemini-3-flash-preview
+[12:12:07]       - P1 accurately summarizes the subscription restrictions and reversal reported in E1, E2, E3, and E7.
+[12:12:07]       - P2 correctly reflects the mixed reception, security concerns, and identity confusion found in E4, E5, E6, E8, E9, and E10.
+[12:12:07]       - P3 accurately describes specific feature requests for OpenClaw regarding timeouts, denylists, and math rendering from E23, E24, and E25.
+[12:13:55] 6/10 ACCEPTED | MAJORITY_AGREE | {"idle":2,"agree":3} | llm-router/policy:prd-sonnet
+[12:13:55]       - All five subject headings cover both OpenClaw and Hermes Agent as required.
+[12:13:55]       - P1 cites E1, E2, E3, E7 and every claim (Anthropic restricting Claude Code subscribers from third-party tools like OpenClaw starting early April, pay-
+[12:13:55]       - P2 cites E4, E5, E6, E8, E9, E10 and every claim (praise, Apple intelligence comparison, life-changing, privilege escalation vulnerability, security r
+[12:14:53] 7/10 ACCEPTED | MAJORITY_AGREE | {"agree":3,"idle":2} | llm-router/policy:prd-gemini
+[12:14:53]       - P1 accurately summarizes the subscription restrictions and reversal mentioned in E1, E2, E3, and E7.
+[12:14:53]       - P2 correctly identifies the reception, security concerns, and rebranding history of OpenClaw from E4, E5, E6, E8, E9, and E10.
+[12:14:53]       - P3 accurately describes the feature requests for watchdog timeouts, denylists, and math rendering in E23, E24, and E25.
+[12:17:12] 8/10 NO_CONSENSUS | MAJORITY_DISAGREE | {"disagree":3,"idle":1,"agree":1} | llm-router/policy:prd-gemini
+[12:21:12] 9/10 ACCEPTED | MAJORITY_AGREE | {"agree":3,"disagree":2} | llm-router/policy:prd-kimi
+[12:21:12]       - All five subject headings cover both OpenClaw and Hermes Agent as required.
+[12:21:12]       - P1 cites E1, E2, E3, E7 and every fact (Anthropic restriction starting April 4, pay-as-you-go requirement, reversal later that month, Google restricti
+[12:21:12]       - P2 cites E4, E5, E6, E8, E9, E10 and every claim (Apple intelligence comparison, life-changing, privilege escalation, security risk, Moltbot renaming,
+[12:25:53] 10/10 ACCEPTED | MAJORITY_AGREE | {"idle":1,"agree":3,"disagree":1} | openrouter/anthropic/claude-sonnet-4.6
+[12:25:53]       - All five subject headings cover both OpenClaw and Hermes Agent as required.
+[12:25:53]       - P1 cites E1, E2, E3, E7 and all claims (Anthropic restriction starting early April, pay-as-you-go requirement, reversal later that month, Google restr
+[12:25:53]       - P2 cites E4, E5, E6, E8, E9, E10 and all claims (Apple intelligence comparison, life-changing praise, privilege escalation vulnerability, security ris
+[12:25:53] === TALLY ===
+[12:25:53]   ACCEPTED: 8/10
+[12:25:53]   REJECTED: 1/10
+[12:25:53]   NO_CONSENSUS: 1/10
+[12:25:53] transcript: C:\Users\henri\Desktop\projekt\MCP\agent-tank\transcripts\stability.json
+EXIT=0

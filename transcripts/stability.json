@@ -1,0 +1,252 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "payload": "payload-accepted.json",
+  "brief_digest": "5f35ae0c238951f78be7c85c5eb1aee408acc8526ed490eea0d6d522488f6328",
+  "started_at": "2026-09-04T11:55:36.741Z",
+  "iterations": [
+    {
+      "n": 1,
+      "commission_id": "stability-01",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "disagree": 2,
+        "agree": 3
+      },
+      "leader_model": "llm-router/policy:prd-gpt-oss",
+      "ms_to_accepted": 131596,
+      "ms_to_finalized": 167049,
+      "reasons": [],
+      "tx": "0x219123a797ed777e0cae59ec10162c618c062c18ce7168b71aa392d53f9325ba"
+    },
+    {
+      "n": 2,
+      "commission_id": "stability-02",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 1,
+        "idle": 1
+      },
+      "leader_model": "llm-router/policy:prd-gemma",
+      "ms_to_accepted": 248865,
+      "ms_to_finalized": 281139,
+      "reasons": [],
+      "tx": "0xa01530ad7c41bb0ace47d4d734330394e49f7336f6591c3a1350d719ae67f400"
+    },
+    {
+      "n": 3,
+      "commission_id": "stability-03",
+      "outcome": "REJECTED",
+      "verdict": "REJECTED",
+      "status": "rejected",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "idle": 1,
+        "agree": 3,
+        "disagree": 1
+      },
+      "leader_model": "llm-router/policy:prd-kimi",
+      "ms_to_accepted": 17598,
+      "ms_to_finalized": 50100,
+      "reasons": [
+        "P1 claims Anthropic's restriction started 'in early April' and that Google was restricting 'AI Pro and Ultra subscribers', but E2 states enforcement starts 'April 4' and E3 only says 'Google AI Pro/Ultra subscribers' without the 'AI' label being confirmed as 'Pro and Ultra' in the cited evidence; more importantly, P1 says 'a later report says Anthropic reversed course and allowed OpenClaw-style Cl",
+        "P2 cites E4, E5, E6, E8, E9, E10 and claims 'one post saying it is what Apple's intelligence features should have been' but E5's title is 'OpenClaw is what Apple intelligence should have been' — the phrasing 'Apple intelligence features' adds 'features' not in E5; also 'another describing it as life changing' is supported by E10 title 'OpenClaw is changing my life', but 'life changing' is a slight",
+        "P5 cites E11 and claims 'Anthropic is separating subscription usage from a new monthly credit system for developer tools starting in June 2026'. E11 says 'Starting June 15, 2026, Anthropic decouples Agent SDK and claude -p usage from interactive subscription limits and introduces a separate monthly Agent SDK credit'. P5 says 'starting in June 2026' which is supported, but 'for developer tools' is ",
+        "The decisive rejection: P1 claims 'Anthropic reversed course and allowed OpenClaw-style Claude command line usage again later that month' — the cited evidence E7 only provides a title 'Anthropic says OpenClaw-style Claude CLI usage is allowed again' with no body text shown, and there is no explicit statement of 'reversed course' or that this is a reversal of the earlier subscription restriction in",
+        "P5 includes 'Claude subscription as the model backend without paying twice' — E11 says 'staying on my Claude subscription' and 'Claude-subscribed users effectively pay twice (subscription + per-token API)'; supported.",
+        "P3, P4 claims are supported by their cited evidence.",
+        "Overall, the deliverable is organised by subject, covers both OpenClaw and Hermes Agent, ships fetch receipts including unreachable sources, and the citation audit says every paragraph cites at least one evidence item and every citation resolves. However, P1 contains a claim ('Anthropic reversed course') that is not present in cited evidence E7 and goes beyond the evidence by interpreting the titl"
+      ],
+      "tx": "0x4febd337020a70e8f61cf766bfba6fa2ebd643a7dd91f6b11052025360c939fb"
+    },
+    {
+      "n": 4,
+      "commission_id": "stability-04",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      },
+      "leader_model": "llm-router/policy:prd-mistral",
+      "ms_to_accepted": 48320,
+      "ms_to_finalized": 154375,
+      "reasons": [],
+      "tx": "0x0f952fb882a363cf53731fa702ba70129bcbc486ef8ddcd2f3868d1e28e97871"
+    },
+    {
+      "n": 5,
+      "commission_id": "stability-05",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      },
+      "leader_model": "openrouter/google/gemini-3-flash-preview",
+      "ms_to_accepted": 50275,
+      "ms_to_finalized": 172775,
+      "reasons": [
+        "P1 accurately summarizes the subscription restrictions and reversal reported in E1, E2, E3, and E7.",
+        "P2 correctly reflects the mixed reception, security concerns, and identity confusion found in E4, E5, E6, E8, E9, and E10.",
+        "P3 accurately describes specific feature requests for OpenClaw regarding timeouts, denylists, and math rendering from E23, E24, and E25.",
+        "P4 and P5 correctly synthesize the Hermes Agent discussion and feature requests from E11 through E22.",
+        "The deliverable follows all formatting and organizational requirements, and the citation audit confirms all evidence requirements are met."
+      ],
+      "tx": "0x2752567e2dba248584545137097a45dfabb47091c5d1de5f3d9b50d0fa38839d"
+    },
+    {
+      "n": 6,
+      "commission_id": "stability-06",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "idle": 2,
+        "agree": 3
+      },
+      "leader_model": "llm-router/policy:prd-sonnet",
+      "ms_to_accepted": 55983,
+      "ms_to_finalized": 88117,
+      "reasons": [
+        "All five subject headings cover both OpenClaw and Hermes Agent as required.",
+        "P1 cites E1, E2, E3, E7 and every claim (Anthropic restricting Claude Code subscribers from third-party tools like OpenClaw starting early April, pay-as-you-go requirement, reversal later that month, Google restricting AI Pro/Ultra subscribers, heavy engagement with over a thousand reactions and hundreds of comments) is supported by those evidence items.",
+        "P2 cites E4, E5, E6, E8, E9, E10 and every claim (praise, Apple intelligence comparison, life-changing, privilege escalation vulnerability, security risk framing, renaming from Moltbot, who-uses-it post with poster noting nobody in their circle does) is supported by those evidence items.",
+        "P3 cites E23, E24, E25 and every claim (configurable streaming watchdog timeout, denylist for command approvals with examples like sending/deleting emails and messages, MathJax/LaTeX rendering support) is supported by those evidence items.",
+        "P4 cites E12, E15 and every claim (Hermes Agent as open source AI agent with persistent memory discussed on Hacker News, Grafana-based observability tools post) is supported by those evidence items.",
+        "P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and every claim (Claude subscription backend without paying twice, Anthropic separating subscription from monthly credit system starting June 2026, automatic backup and version control for ~/.hermes/, Searxng web search support, remote agent with local tool execution, Mistral as model provider, generalized ACP client for coding assistant to",
+        "The citation audit confirms all paragraphs cite at least one evidence item and all citations resolve.",
+        "The deliverable ships 8 fetch receipts including the 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit), satisfying the evidence shipping requirement.",
+        "The deliverable is organised by subject with 5 headings and written as continuous prose, meeting the acceptance criteria."
+      ],
+      "tx": "0x276495b20ba799d2d18376b67e248cb7c9d6f18c609518df635cd20afb2b27df"
+    },
+    {
+      "n": 7,
+      "commission_id": "stability-07",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      },
+      "leader_model": "llm-router/policy:prd-gemini",
+      "ms_to_accepted": 15654,
+      "ms_to_finalized": 44775,
+      "reasons": [
+        "P1 accurately summarizes the subscription restrictions and reversal mentioned in E1, E2, E3, and E7.",
+        "P2 correctly identifies the reception, security concerns, and rebranding history of OpenClaw from E4, E5, E6, E8, E9, and E10.",
+        "P3 accurately describes the feature requests for watchdog timeouts, denylists, and math rendering in E23, E24, and E25.",
+        "P4 and P5 correctly report on Hermes Agent discussion and the extensive list of feature requests found in E11 through E22.",
+        "The deliverable meets all formatting and evidence requirements, including the inclusion of fetch receipts and grouping by subject."
+      ],
+      "tx": "0x5fceb95da68877a8f354f30a5aad62e6d7fd46e881039a221bb1433b7772ec6d"
+    },
+    {
+      "n": 8,
+      "commission_id": "stability-08",
+      "outcome": "NO_CONSENSUS",
+      "verdict": null,
+      "status": "submitted",
+      "state_applied": false,
+      "consensus_result": "MAJORITY_DISAGREE",
+      "validator_votes": {
+        "disagree": 3,
+        "idle": 1,
+        "agree": 1
+      },
+      "leader_model": "llm-router/policy:prd-gemini",
+      "ms_to_accepted": 93637,
+      "ms_to_finalized": 123640,
+      "reasons": [],
+      "tx": "0x34568b8edf31bb636a6bb3d65072fd4becb9f6d82646b8f53f1d6bd4b1ac86eb"
+    },
+    {
+      "n": 9,
+      "commission_id": "stability-09",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 2
+      },
+      "leader_model": "llm-router/policy:prd-kimi",
+      "ms_to_accepted": 94345,
+      "ms_to_finalized": 123392,
+      "reasons": [
+        "All five subject headings cover both OpenClaw and Hermes Agent as required.",
+        "P1 cites E1, E2, E3, E7 and every fact (Anthropic restriction starting April 4, pay-as-you-go requirement, reversal later that month, Google restriction, engagement figures) is present in those evidence items.",
+        "P2 cites E4, E5, E6, E8, E9, E10 and every claim (Apple intelligence comparison, life-changing, privilege escalation, security risk, Moltbot renaming, who-uses-it post) is present in those evidence items.",
+        "P3 cites E23, E24, E25 and every claim (streaming watchdog timeout, denylist for exec-approvals with email/message examples, MathJax/LaTeX rendering) is present in those evidence items.",
+        "P4 cites E12, E15 and the claims (open-source AI agent with persistent memory on Hacker News, Grafana observability post) are supported by those evidence items.",
+        "P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and every claim (Claude subscription double-billing, June 2026 credit change, backup/version control, Searxng, remote agent with local tool execution, Mistral, generalized ACP client, tiered permissions, mobile app, cloud sync, lazy tool schema loading) is present in those evidence items.",
+        "Citation audit confirms all citations resolve and no dangling references exist.",
+        "Fetch receipts for 8 sources are present, with 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit) noted as required.",
+        "Deliverable is organised by subject with prose paragraphs, covering both products, satisfying all acceptance criteria."
+      ],
+      "tx": "0x45d03d14942f943eb30a04fb12dc5650854fd74d5d30290ef4e0e9f9fcb8b8bb"
+    },
+    {
+      "n": 10,
+      "commission_id": "stability-10",
+      "outcome": "ACCEPTED",
+      "verdict": "ACCEPTED",
+      "status": "accepted",
+      "state_applied": true,
+      "consensus_result": "MAJORITY_AGREE",
+      "validator_votes": {
+        "idle": 1,
+        "agree": 3,
+        "disagree": 1
+      },
+      "leader_model": "openrouter/anthropic/claude-sonnet-4.6",
+      "ms_to_accepted": 228684,
+      "ms_to_finalized": 261020,
+      "reasons": [
+        "All five subject headings cover both OpenClaw and Hermes Agent as required.",
+        "P1 cites E1, E2, E3, E7 and all claims (Anthropic restriction starting early April, pay-as-you-go requirement, reversal later that month, Google restriction, engagement figures) are supported by those evidence items.",
+        "P2 cites E4, E5, E6, E8, E9, E10 and all claims (Apple intelligence comparison, life-changing praise, privilege escalation vulnerability, security risk characterisation, Moltbot renaming, who-uses-it question) are supported by those evidence items.",
+        "P3 cites E23, E24, E25 and all claims (streaming watchdog timeout, denylist for command approvals with email/message examples, MathJax/LaTeX rendering request) are supported by those evidence items.",
+        "P4 cites E12, E15 and all claims (Hermes Agent open source with persistent memory on Hacker News, Grafana-based observability post) are supported by those evidence items.",
+        "P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and all claims (Claude subscription backend, June 2026 credit change, backup/version control, Searxng, remote agent with local tool execution, Mistral provider, generalized ACP client, tiered permissions, mobile app with voice calling, cloud sync, lazy tool schema loading) are supported by those evidence items.",
+        "Citation audit confirms all paragraphs cite at least one evidence item and all citations resolve.",
+        "Fetch receipts for 8 sources are shipped, including the 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit), satisfying the evidence requirement.",
+        "Deliverable is organised by subject with headings, written as continuous prose, and covers both products without overstating claims."
+      ],
+      "tx": "0x042a7f1c8f000d3ce92d92a2413e9c6308548b5533175990c146a115bd9d5cf3"
+    }
+  ],
+  "tally": {
+    "ACCEPTED": 8,
+    "REJECTED": 1,
+    "NO_CONSENSUS": 1
+  },
+  "contract_address": "0xD08455a5Cfc53E43731834d6C92a6FE4aA0b3B75",
+  "total_ms": 1816943,
+  "finished_at": "2026-09-04T12:25:53.684Z"
+}
