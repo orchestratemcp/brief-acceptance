@@ -27,6 +27,7 @@ import {
   nativeBalance,
   track,
   succeeded,
+  applied,
   contractAddressOf,
   executionResultOf,
   withRetry,
@@ -145,8 +146,19 @@ async function main() {
       "  judged   ",
       judged.record.status,
       judged.record.execution_result,
+      judged.record.consensus_result,
       `accepted in ${judged.record.ms_to_accepted} ms, finalized in ${judged.record.ms_to_finalized} ms`,
     );
+    const stateApplied = applied(judged.receipt);
+    if (!stateApplied) {
+      // FINALIZED + SUCCESS + MAJORITY_DISAGREE: the validators refused the
+      // leader's verdict, so nothing was written. Say so rather than reading
+      // back an empty verdict and calling it a result.
+      log(
+        `  NO STATE APPLIED — consensus was ${judged.record.consensus_result}. ` +
+          "The committee rejected the leader's proposed verdict; the commission is unchanged.",
+      );
+    }
 
     const verdict = await withRetry("get_verdict", () =>
       clientRpc.readContract({ address, functionName: "get_verdict", args: [cid] }),
@@ -161,6 +173,8 @@ async function main() {
       deliverable_bytes: Buffer.byteLength(payload.deliverable_json),
       paragraphs: payload.deliverable.paragraphs.length,
       evidence: payload.deliverable.evidence.length,
+      state_applied: stateApplied,
+      consensus_result: judged.record.consensus_result,
       verdict: verdict.verdict,
       reasons: verdict.reasons,
       judge_output: verdict.judge_output,
@@ -171,7 +185,7 @@ async function main() {
       ms_to_finalized: judged.record.ms_to_finalized,
       evaluate_tx: evaluate,
     };
-    log(`  VERDICT: ${verdict.verdict}`);
+    log(`  VERDICT: ${verdict.verdict || "(none — no state applied)"}`);
     for (const reason of verdict.reasons ?? []) log(`    - ${reason}`);
   }
 

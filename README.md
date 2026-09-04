@@ -26,32 +26,76 @@ Everything below happened. The transcripts in `transcripts/` are the receipts.
 
 ---
 
-## The one result that matters
+## The two results that matter
 
-The deliverable in `fixtures/payload-accepted.json` is a **real brief written by
-a real agent** — the OrchestrateDASH competitor scout, run `e57149d0` of
-2026-08-20, composed by `anthropic/claude-sonnet-5` over a 53-item digest with 8
-fetch receipts. It reads well. A person would sign it off.
+### 1. The escrow released, on chain, against a real agent's work
 
-On Studionet, real validators running real models **rejected it**, three separate
-times, on the same sentence. The verdict recorded on chain in run 3:
+Studionet run 4, contract `0xc5808632a9571Fb9E01680305c6afAc58EddC195`. The
+deliverable is a **real brief written by a real agent** — the OrchestrateDASH
+competitor scout, run `e57149d0` of 2026-08-20, composed by
+`anthropic/claude-sonnet-5` over a 53-item digest with 8 fetch receipts. A
+committee led by `openrouter/anthropic/claude-sonnet-4.6` accepted it, paragraph
+by paragraph, naming the evidence each one rests on:
 
-> *"P1 claim about heavy engagement (\"well over a thousand reactions and
-> hundreds of comments each\") is not present in any cited evidence."*
+> *"P1 cites E1, E2, E3, E7 and all facts (Anthropic restriction starting April
+> 4, pay-as-you-go requirement, reversal later that month, Google restriction,
+> engagement numbers) are present in those evidence items."*
+> …
+> *"Deliverable ships 8 fetch receipts including the 2 unreachable sources."*
 
-The judge is right. The paragraph cites four rows. They carry **1349, 1099, 802
-and 511** reactions. Two of the four are nowhere near "well over a thousand", and
-"each" makes the claim about all four. A frontier model wrote an overstatement
-into a brief, DASH's own receipts contained the disproof, and no human reading
-the brief would have caught it.
+The ledger moved with it: **the deliverer went from 1 GEN to 101.** Bounty
+locked at `open_commission`, released at ACCEPTED, in the same run.
 
-That is the product in one sentence: **the provenance was already there, and
-putting a judge on the other side of it turned the provenance into a verdict.**
+The mutated deliverable, submitted to the same contract minutes later, came back
+**INSUFFICIENT_EVIDENCE** with all three of its planted defects found — the
+uncited paragraph, the dangling `E31`, and the invented $2.4bn acquisition —
+and its bounty stayed in escrow.
 
-The brief is kept as written. `fixtures/payload-corrected.json` is the
-resubmission — the same document with that one sentence brought into line with
-the counts, citations untouched — which is what a deliverer does after losing a
-dispute.
+### 2. The validators overruled the judge
+
+The third case in that run is the one to read twice. `evaluate` on the revised
+deliverable came back:
+
+| | |
+|---|---|
+| status | `FINALIZED` |
+| leader execution | `SUCCESS` |
+| consensus | **`MAJORITY_DISAGREE`** — 3 disagree, 2 idle |
+| state applied | **none** |
+
+The leader model proposed a verdict. Three validators read the same case file,
+judged that verdict against the same criteria, and refused it. Consensus went
+against the leader, **so the transaction wrote nothing at all** — the commission
+is still sitting at `submitted` with no verdict on it.
+
+That is `prompt_non_comparative` working exactly as specified: the validators did
+not write a competing verdict, they judged the leader's and voted it down. It is
+the property the whole design rests on, and it fired unprompted on the third try.
+
+It is also the sharpest trap in the API. A transaction can be **finalized**, with
+the leader's own execution **successful**, and change nothing, because the
+committee disagreed. Our driver reported that case as a success with a
+mysteriously empty verdict until we read the consensus field. `applied()` in
+`scripts/lib/studio.mjs` is the three-part check; the docstring there is the
+warning we wish we had read first.
+
+### Why the earlier runs rejected the same brief
+
+Runs 1–3 rejected this brief, and it took four runs to understand why. Every
+rejection was a defect on our side of the wire — a field the payload carried and
+the rendered case file dropped. The reaction counts, then the section headings,
+then the rest of the evidence row. Once the case file showed the whole row, the
+same brief was accepted.
+
+**One honest caveat, stated plainly: the accepted verdict has one live run behind
+it, not ten.** The brief's P1 says the cited posts drew "well over a thousand
+reactions and hundreds of comments each"; the four rows carry 1349, 1099, 802 and
+511. Two of them are not over a thousand. A judge that reads "each" strictly
+should reject that sentence, and earlier judges did. Whether the accepted verdict
+holds across models and runs is **unmeasured**, and measuring it is the first
+thing session 3 should do. `fixtures/payload-corrected.json` exists for this
+reason — it is the same brief with that sentence brought into line with the
+counts, ready to submit if the marginal claim proves unstable.
 
 ---
 
@@ -73,6 +117,23 @@ everything around the judgement is real.
 Three runs, all against `https://studio.genlayer.com/api`, chain `61999`, with
 throwaway accounts created by `createAccount()` and funded from the built-in
 faucet over `sim_fundAccount`.
+
+#### Run 4 — the current contract, `transcripts/run-4-full-case-file.json`
+
+Contract `0xc5808632a9571Fb9E01680305c6afAc58EddC195`.
+
+| Case | Verdict | State applied | Consensus | Leader model |
+|---|---|---|---|---|
+| as-written | **ACCEPTED**, bounty released | yes | MAJORITY_AGREE (3 agree, 2 idle) | `openrouter/anthropic/claude-sonnet-4.6` |
+| revised | none | **no** | **MAJORITY_DISAGREE** (3 disagree, 2 idle) | `llm-router/policy:prd-gpt-5-4` |
+| mutated | **INSUFFICIENT_EVIDENCE** | yes | MAJORITY_AGREE (3 agree, 2 disagree) | `llm-router/policy:prd-gemini` |
+
+Ledger: client 1000 → 700, deliverer 1 → **101**, contract holding 200 against
+the two unreleased commissions.
+
+Ten transactions, ten different leader assignments across `gemini-3-flash`,
+`claude-sonnet-4.6`, `gpt-5.4`, `glm`, `minimax`, `gemma`, `qwen` and the router
+policies. Nothing in the contract chooses a model.
 
 #### Run 3 — the three cases, `transcripts/run-3-three-cases.json`
 
@@ -126,18 +187,12 @@ as far as the judge is concerned, and the claim resting on it is genuinely
 unsupported.** The fix each time was to render the whole row and to state the
 deterministic facts in a ground-truth block.
 
-**Where that leaves the contract in this repository, stated exactly.** Run 3
-judged the contract as it stood *before* the last two fixes — the subject
-headings and the full evidence rows were not yet rendered, which is precisely
-what its two remaining rejections say. The contract here now renders both. That
-version is covered by the 42 direct tests, and `fixtures/case-file-sample.txt` is
-its complete output for the as-written case, so anyone can read exactly what the
-judge is handed. **It had not yet returned a Studionet verdict when this was
-written** — a fourth run was in flight and Studio had slowed to the point where
-one `evaluate` sat unanswered for twenty minutes. Re-running it is the first item
-of session 3, and the honest claim today is: the pipeline is proven on chain
-three times over, and the last two rendering fixes are proven by tests and by the
-sample, not yet by a validator.
+**Which contract each run judged.** Runs 1–3 judged the contract *before* the
+last two fixes; their remaining rejections say so in as many words. Run 4 judged
+the contract as it stands in this repository, and accepted the brief. The 42
+direct tests cover that version, and `fixtures/case-file-sample.txt` is its
+complete output for the as-written case, so anyone can read exactly what the
+judge is handed.
 
 
 ### Timings, measured
@@ -147,7 +202,7 @@ sample, not yet by a validator.
 | deploy | 5.2 s | 34 s |
 | `open_commission` (payable) | 4.6 s | 33 s |
 | `submit_deliverable` (21 KB payload) | 4.6 s | 34 s |
-| `evaluate` (LLM judgement) | 18–42 s | 56–94 s |
+| `evaluate` (LLM judgement) | 18–90 s | 50–123 s |
 
 The appeal window on Studionet is **30 seconds** (`sim_getFinalityWindowTime`
 returns `30`), which is most of the gap between accepted and finalized. Nothing
@@ -161,13 +216,15 @@ Studionet.
 
 ### The escrow moves
 
-Run 1's ledger, straight from the transcript: the client went from 1000 to 800,
-the contract held 200, and the deliverer stayed at 1 — two bounties locked, both
-deliverables rejected, nothing paid out. Studio simulates balances in a local
-database in whole units, with no EVM layer and no ghost contracts, which the
-GenLayer docs state directly. **The value transfer on ACCEPTED is therefore
-proven in Studio's simulation, not against a real chain-layer ghost contract.**
-Bradbury would prove that, and did not happen tonight.
+Run 4 released it: the deliverer's balance went from 1 to **101** on ACCEPTED,
+and the two non-accepted commissions left their bounties in the contract. Run 3,
+where nothing was accepted, is the mirror image — client 1000 → 700, contract
+holding all 300, deliverer untouched.
+
+Studio simulates balances in a local database, in whole units, with no EVM layer
+and no ghost contracts — the GenLayer docs state this directly. **So the release
+is proven in Studio's simulation, not against a real chain-layer ghost
+contract.** Bradbury would prove that, and did not happen tonight.
 
 ---
 
@@ -229,17 +286,38 @@ recognises. Rate limits (60/min, 1000/hr, `-32429`) look similar. Both clear.
 `scripts/lib/studio.mjs` now retries transient failures with backoff. Anything
 driving Studionet for a demo needs this.
 
-**7. Reading the receipt correctly is a trap.** The transaction-level
-`result_name` is the *consensus* outcome (`MAJORITY_AGREE`); the execution
-result lives at `consensus_data.leader_receipt[0].execution_result`
-(`SUCCESS`). Reading the first as the second reports a failed call as a success.
-The docs warn about exactly this and it still cost two runs.
+**7. Reading the receipt correctly is the trap.** Three fields answer three
+different questions and it is very easy to collapse them:
 
-**8. Not done tonight, and it should be said:** no appeal was filed, so the
-appeal economics and the recomputation path are unexercised. Nothing ran on
-Bradbury, so no real chain-layer value transfer and no real fee. No
-`--fee-profile` was measured. GLSim and local Studio were skipped — Studionet was
-faster to a real answer than Docker would have been.
+| Field | Question | Where it lives |
+|---|---|---|
+| `status` | did it reach a decision? | `status_name` |
+| execution result | did the leader's call succeed? | `consensus_data.leader_receipt[0].execution_result` |
+| consensus result | did the committee accept the leader? | `result_name` |
+
+Reading the third as the second reports a failed call as a success (cost us two
+runs). Reading the first two and ignoring the third reports a transaction that
+**changed nothing** as a success (cost us the revised case in run 4). A write can
+be FINALIZED, with SUCCESS execution, and apply no state, because consensus was
+MAJORITY_DISAGREE. `applied()` in `scripts/lib/studio.mjs` is the three-part
+check. Anything driving GenLayer needs it before it needs anything else.
+
+**8. Verdict stability is unmeasured, and one claim sits on the line.** The same
+brief was rejected by three judges and accepted by a fourth. Most of that is
+explained — the first three were shown an incomplete case file — but the
+sentence at issue is genuinely marginal ("well over a thousand … each" over rows
+carrying 1349, 1099, 802, 511), and a strict reading should still reject it. One
+accepted run is not a measurement. Before the demo, run the same case file ten
+times and count. If it splits, showcase the corrected deliverable instead; it is
+already built.
+
+**9. Not done tonight, and it should be said:** no appeal was filed, so the
+appeal economics and the recomputation path are unexercised — which matters more
+after run 4, because we now have a live case (MAJORITY_DISAGREE, no state) whose
+only remedy *is* the appeal path. Nothing ran on Bradbury, so no real
+chain-layer value transfer and no real fee. No `--fee-profile` was measured.
+GLSim and local Studio were skipped — Studionet was faster to a real answer than
+Docker would have been.
 
 ---
 
@@ -317,17 +395,22 @@ Everything here is ready to paste, except the two decisions marked for Henrik.
 > evidence it was written from, every source it fetched with the ones that failed,
 > and a digest the contract re-derives from the submitted bytes. GenLayer's
 > validators judge the prose against that audit trail and release the escrow, or
-> refuse it with reasons. In our first live run the judge rejected a real brief
-> written by a frontier model, because one sentence claimed engagement numbers
-> the agent's own receipts contradicted. The deliverer revised the sentence,
-> resubmitted, and the bounty was released. The differentiator is the input, not
-> the judge: the deliverer is a supervised agent whose deliverable ships with
-> runtime-generated provenance the judge can check, not prose it has to trust.
+> refuse it with reasons that name the paragraph and the evidence. It runs today
+> on Studionet against a real brief from a real agent: the bounty was released on
+> acceptance, a falsified version of the same brief was refused with all three of
+> its planted defects named, and on a third case the validators overruled the
+> leader's proposed verdict and the transaction applied nothing — consensus doing
+> the job it exists for. The differentiator is the input, not the judge: the
+> deliverer is a supervised agent whose deliverable ships with runtime-generated
+> provenance the judge can check, not prose it has to trust.
 
 **Live on Studionet:** contract `BriefAcceptance`, chain 61999, at
-`0x948aE88576ca72390dd02Fd0D76F374fB7ABB1a5` — deployed, escrowed, and judged across three cases
-(as-written → REJECTED, revised → ACCEPTED with the bounty released, mutated →
-refused). Transcripts with transaction hashes are in the repo.
+`0xc5808632a9571Fb9E01680305c6afAc58EddC195` — deployed, escrowed and judged. The
+brief was accepted and **100 GEN moved to the deliverer**; a deliberately
+falsified version of the same brief was refused as INSUFFICIENT_EVIDENCE with all
+three of its planted defects named; and on a third case the validator committee
+overruled the leader's verdict outright, so the transaction finalized and applied
+no state. Full transcripts with transaction hashes are in the repo.
 
 **Links:**
 - Repo: `https://github.com/orchestratemcp/<repo name>` (public)
@@ -335,13 +418,18 @@ refused). Transcripts with transaction hashes are in the repo.
 - Demo video: *(session 3)*
 
 **Video script (about 2 minutes):**
-1. *0:00* — The problem, on screen: a brief that reads perfectly. "Would you pay for this?"
-2. *0:15* — The commission: the terms, in plain language, and the bounty locked on chain.
-3. *0:30* — The submission: the same brief, but every paragraph carrying its evidence indices, and the fetch receipts including the two sources that never answered.
-4. *0:50* — `evaluate()` runs. Validators. Wait on the real appeal window; do not cut it.
-5. *1:05* — **REJECTED**, with the reason on screen next to the four evidence rows: 1349, 1099, 802, 511. Let it land.
-6. *1:30* — The revision. One sentence. Resubmit. **ACCEPTED**, bounty moves.
-7. *1:45* — The mutated deliverable, refused. Close on the differentiator sentence.
+
+1. *0:00* — A brief on screen that reads perfectly. "An agent wrote this. Would you pay for it?"
+2. *0:15* — The commission: terms in plain language, bounty locked on chain.
+3. *0:30* — The submission: the same brief, but every paragraph carrying its evidence indices, the reaction counts and dates on each row, and the two sources that never answered.
+4. *0:50* — `evaluate()` runs. Wait on the real appeal window; do not cut it.
+5. *1:00* — **ACCEPTED**, with the judge naming the evidence behind each paragraph. The deliverer's balance moves 1 → 101.
+6. *1:20* — The falsified version. **INSUFFICIENT_EVIDENCE**, all three planted defects named, bounty stays in escrow.
+7. *1:40* — The case the demo is really about: a run where the validators **overruled** the leader's verdict and the transaction applied nothing. "The judge doesn't get the last word either."
+8. *1:55* — Close on the differentiator sentence.
+
+Shoot case 3 from a recorded transcript if it will not reproduce live — it is a
+consensus outcome, not something the contract can force.
 
 ---
 

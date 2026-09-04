@@ -7,3 +7,38 @@
 [11:12:10]   opened    FINALIZED SUCCESS
 [11:12:48]   submitted FINALIZED SUCCESS
 [11:12:48]   evaluating (real validators, real models) …
+[11:14:27]   judged    FINALIZED SUCCESS accepted in 65373 ms, finalized in 97572 ms
+[11:14:29]   VERDICT: ACCEPTED
+[11:14:29]     - All five subject headings cover both OpenClaw and Hermes Agent as required.
+[11:14:29]     - P1 cites E1, E2, E3, E7 and all facts (Anthropic restriction starting April 4, pay-as-you-go requirement, reversal later that month, Google restriction, engagement numbers) are present in those evidence items.
+[11:14:29]     - P2 cites E4, E5, E6, E8, E9, E10 and all claims (Apple intelligence comparison, life-changing, privilege escalation, security nightmare, Moltbot renaming, who-uses-it post) are supported by those evidence items.
+[11:14:29]     - P3 cites E23, E24, E25 and all claims (streaming watchdog timeout, denylist for exec-approvals with email/message examples, MathJax/LaTeX rendering) are supported by those evidence items.
+[11:14:29]     - P4 cites E12, E15 and all claims (open-source AI agent with persistent memory, Hacker News discussion, Grafana observability post) are supported by those evidence items.
+[11:14:29]     - P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and all claims (Claude subscription double-billing, June 2026 credit change, backup/version control, Searxng, remote agent with local tool execution, Mistral support, generalized ACP client, tiered permissions, mobile app with voice calling, cloud sync, lazy tool schema loading) are supported by those evidence items.
+[11:14:29]     - Citation audit confirms all citations resolve and no dangling references exist.
+[11:14:29]     - Deliverable ships 8 fetch receipts including the 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit).
+[11:14:29]     - Deliverable is organised by subject with 5 headings, written as continuous prose, and covers both products without overstating claims.
+[11:14:29] --- case "revised" (dash-e57149d0-v2) ---
+[11:15:04]   opened    FINALIZED SUCCESS
+[11:15:39]   submitted FINALIZED SUCCESS
+[11:15:39]   evaluating (real validators, real models) …
+GenLayer RPC error (eth_getTransactionByHash): Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+  [retry 1/4] evaluate:revised:accepted: An unknown RPC error occurred.
+
+Details: Unexpected token '<', "<!DOCTYPE "... is not vali — waiting 4000ms
+[11:17:42]   judged    FINALIZED SUCCESS accepted in 90487 ms, finalized in 122914 ms
+[11:17:45]   VERDICT: 
+[11:17:45] --- case "mutated" (dash-e57149d0-mutated) ---
+[11:18:22]   opened    FINALIZED SUCCESS
+[11:18:57]   submitted FINALIZED SUCCESS
+[11:18:57]   evaluating (real validators, real models) …
+[11:19:49]   judged    FINALIZED SUCCESS accepted in 21927 ms, finalized in 50804 ms
+[11:19:51]   VERDICT: INSUFFICIENT_EVIDENCE
+[11:19:51]     - P2 cites no evidence, which violates the requirement that every paragraph must cite at least one evidence item.
+[11:19:51]     - P3 cites E31, but the evidence list only contains 25 items (E1-E25), making it a dangling citation.
+[11:19:51]     - P1 claims Anthropic acquired OpenClaw for $2.4 billion in July 2026 and 78% of users migrated to Hermes Agent, but these facts are not present in the cited evidence (E1, E2, E3, E7) or anywhere in the EVIDENCE list.
+[11:19:55] balances after: {"client":"700","deliverer":"101","contract":"200"}
+[11:19:55] transcript written to transcripts/run-4-full-case-file.json
+[11:19:55] RESULT as-written=ACCEPTED revised= mutated=INSUFFICIENT_EVIDENCE
+[11:19:55] NOTE: the revised deliverable was not accepted — read the reasons above.
+EXIT=0

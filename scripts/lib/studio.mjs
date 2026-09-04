@@ -195,6 +195,31 @@ export function succeeded(receipt) {
   return result === "FINISHED_WITH_RETURN" || result === "SUCCESS" || result === 1;
 }
 
+/**
+ * Whether the transaction actually CHANGED anything.
+ *
+ * There are three different questions and they are easy to collapse into one:
+ *
+ *   status              did the transaction reach a decision?      FINALIZED
+ *   execution_result    did the leader's own call succeed?         SUCCESS
+ *   consensus result    did the committee accept the leader?       MAJORITY_AGREE
+ *
+ * A transaction can be FINALIZED, with the leader's execution SUCCESS, and apply
+ * NO STATE, because the committee returned MAJORITY_DISAGREE. Studionet run 4
+ * did exactly that on the revised deliverable: the leader proposed a verdict,
+ * three validators judged that verdict against the same case file and refused
+ * it, and the commission stayed `submitted` with no verdict at all. Reading only
+ * the first two fields reports that as a success with a mysteriously empty
+ * result.
+ *
+ * This is the equivalence principle doing its job. It is also the single
+ * easiest thing to get wrong when driving GenLayer from a script.
+ */
+export function applied(receipt) {
+  const consensus = receipt?.result_name ?? receipt?.result ?? null;
+  return succeeded(receipt) && (consensus === "MAJORITY_AGREE" || consensus === 6);
+}
+
 export function contractAddressOf(receipt) {
   return (
     receipt?.data?.contract_address ??

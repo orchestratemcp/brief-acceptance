@@ -1,0 +1,233 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "started_at": "2026-09-04T11:10:51.975Z",
+  "bounty": "100",
+  "steps": [
+    {
+      "label": "deploy",
+      "hash": "0x2e046a602235f5641f6483f145e963e8db0e7c3fbbf27caf193c6cc764bf9a69",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4842,
+      "ms_to_finalized": 37011,
+      "leader_model": "openrouter/google/gemini-3-flash-preview",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "open_commission:as-written",
+      "hash": "0xbc5999d4c22043b554b5aa52466a04e104b74e654c093c70233ef6abbb035c29",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 6687,
+      "ms_to_finalized": 35503,
+      "leader_model": "llm-router/policy:prd-glm",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "submit_deliverable:as-written",
+      "hash": "0xf5a426af0f61b1c44eaf0284253c12f2c03a7774cd8cf657e4c75b91f651f08b",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 6933,
+      "ms_to_finalized": 37058,
+      "leader_model": "llm-router/policy:prd-minimax",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "evaluate:as-written",
+      "hash": "0x6efa2e53ab39ec16e74ade319ea6ec92e1df618cb4d1c33e15835f1809b6bc45",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 65373,
+      "ms_to_finalized": 97572,
+      "leader_model": "openrouter/anthropic/claude-sonnet-4.6",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "open_commission:revised",
+      "hash": "0x67a3b4d8d46ec3a84ce9b093bfe980becdea0719afd2d1874d43a35e261bb315",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4514,
+      "ms_to_finalized": 33609,
+      "leader_model": "llm-router/policy:prd-gpt-5-4",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "submit_deliverable:revised",
+      "hash": "0xd19c880f2a482369fdf190375d1de6ffa8ad4556c92df7674a16ed07e2af9b11",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4689,
+      "ms_to_finalized": 34024,
+      "leader_model": "llm-router/policy:prd-gemma",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "evaluate:revised",
+      "hash": "0xa4f1c6f2342cb03f6fd756fd780c5f750a371a1afbee65ca49b881eb4dff27a3",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_DISAGREE",
+      "ms_to_accepted": 90487,
+      "ms_to_finalized": 122914,
+      "leader_model": "llm-router/policy:prd-gpt-5-4",
+      "validator_votes": {
+        "disagree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "open_commission:mutated",
+      "hash": "0xc0f8bfbebf4dcfbccad2455af8e24fbf88a398e0ddc2f3324366cce18bb9684d",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4563,
+      "ms_to_finalized": 36672,
+      "leader_model": "llm-router/policy:prd-qwen",
+      "validator_votes": {
+        "agree": 5
+      }
+    },
+    {
+      "label": "submit_deliverable:mutated",
+      "hash": "0xcd37d15ffc372c8e40f62691dd424b59d905f0aa9e514cc63b4d562c66f7c227",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 4638,
+      "ms_to_finalized": 33885,
+      "leader_model": "openrouter/openai/gpt-5.4",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      }
+    },
+    {
+      "label": "evaluate:mutated",
+      "hash": "0x97b4d8661db1b5f0820cddbd9a63e1a6b51791292bbba65ae02e7c71ffac6201",
+      "status": "FINALIZED",
+      "execution_result": "SUCCESS",
+      "consensus_result": "MAJORITY_AGREE",
+      "ms_to_accepted": 21927,
+      "ms_to_finalized": 50804,
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 2
+      }
+    }
+  ],
+  "cases": {
+    "as-written": {
+      "commission_id": "dash-e57149d0",
+      "brief_digest": "5f35ae0c238951f78be7c85c5eb1aee408acc8526ed490eea0d6d522488f6328",
+      "deliverable_bytes": 21069,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "ACCEPTED",
+      "reasons": [
+        "All five subject headings cover both OpenClaw and Hermes Agent as required.",
+        "P1 cites E1, E2, E3, E7 and all facts (Anthropic restriction starting April 4, pay-as-you-go requirement, reversal later that month, Google restriction, engagement numbers) are present in those evidence items.",
+        "P2 cites E4, E5, E6, E8, E9, E10 and all claims (Apple intelligence comparison, life-changing, privilege escalation, security nightmare, Moltbot renaming, who-uses-it post) are supported by those evidence items.",
+        "P3 cites E23, E24, E25 and all claims (streaming watchdog timeout, denylist for exec-approvals with email/message examples, MathJax/LaTeX rendering) are supported by those evidence items.",
+        "P4 cites E12, E15 and all claims (open-source AI agent with persistent memory, Hacker News discussion, Grafana observability post) are supported by those evidence items.",
+        "P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and all claims (Claude subscription double-billing, June 2026 credit change, backup/version control, Searxng, remote agent with local tool execution, Mistral support, generalized ACP client, tiered permissions, mobile app with voice calling, cloud sync, lazy tool schema loading) are supported by those evidence items.",
+        "Citation audit confirms all citations resolve and no dangling references exist.",
+        "Deliverable ships 8 fetch receipts including the 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit).",
+        "Deliverable is organised by subject with 5 headings, written as continuous prose, and covers both products without overstating claims."
+      ],
+      "judge_output": "{\"verdict\": \"ACCEPTED\", \"reasons\": [\"All five subject headings cover both OpenClaw and Hermes Agent as required.\", \"P1 cites E1, E2, E3, E7 and all facts (Anthropic restriction starting April 4, pay-as-you-go requirement, reversal later that month, Google restriction, engagement numbers) are present in those evidence items.\", \"P2 cites E4, E5, E6, E8, E9, E10 and all claims (Apple intelligence comparison, life-changing, privilege escalation, security nightmare, Moltbot renaming, who-uses-it post) are supported by those evidence items.\", \"P3 cites E23, E24, E25 and all claims (streaming watchdog timeout, denylist for exec-approvals with email/message examples, MathJax/LaTeX rendering) are supported by those evidence items.\", \"P4 cites E12, E15 and all claims (open-source AI agent with persistent memory, Hacker News discussion, Grafana observability post) are supported by those evidence items.\", \"P5 cites E11, E13, E14, E16, E17, E18, E19, E20, E21, E22 and all claims (Claude subscription double-billing, June 2026 credit change, backup/version control, Searxng, remote agent with local tool execution, Mistral support, generalized ACP client, tiered permissions, mobile app with voice calling, cloud sync, lazy tool schema loading) are supported by those evidence items.\", \"Citation audit confirms all citations resolve and no dangling references exist.\", \"Deliverable ships 8 fetch receipts including the 2 unreachable sources (OpenClaw on Reddit, Hermes Agent on Reddit).\", \"Deliverable is organised by subject with 5 headings, written as continuous prose, and covers both products without overstating claims.\"]\n}",
+      "status": "accepted",
+      "leader_model": "openrouter/anthropic/claude-sonnet-4.6",
+      "validator_votes": {
+        "agree": 3,
+        "idle": 2
+      },
+      "ms_to_accepted": 65373,
+      "ms_to_finalized": 97572,
+      "evaluate_tx": "0x6efa2e53ab39ec16e74ade319ea6ec92e1df618cb4d1c33e15835f1809b6bc45"
+    },
+    "revised": {
+      "commission_id": "dash-e57149d0-v2",
+      "brief_digest": "a607a85737c52033c48321fbeecc9788c30adf40a766677d7d686290a153da12",
+      "deliverable_bytes": 21260,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "",
+      "reasons": [],
+      "judge_output": "",
+      "status": "submitted",
+      "leader_model": "llm-router/policy:prd-gpt-5-4",
+      "validator_votes": {
+        "disagree": 3,
+        "idle": 2
+      },
+      "ms_to_accepted": 90487,
+      "ms_to_finalized": 122914,
+      "evaluate_tx": "0xa4f1c6f2342cb03f6fd756fd780c5f750a371a1afbee65ca49b881eb4dff27a3"
+    },
+    "mutated": {
+      "commission_id": "dash-e57149d0-mutated",
+      "brief_digest": "c5ef069697c2f7cd3f97c4e373e2da9646ec2eb76e81a5041a47a1a1e26f005d",
+      "deliverable_bytes": 21216,
+      "paragraphs": 5,
+      "evidence": 25,
+      "verdict": "INSUFFICIENT_EVIDENCE",
+      "reasons": [
+        "P2 cites no evidence, which violates the requirement that every paragraph must cite at least one evidence item.",
+        "P3 cites E31, but the evidence list only contains 25 items (E1-E25), making it a dangling citation.",
+        "P1 claims Anthropic acquired OpenClaw for $2.4 billion in July 2026 and 78% of users migrated to Hermes Agent, but these facts are not present in the cited evidence (E1, E2, E3, E7) or anywhere in the EVIDENCE list."
+      ],
+      "judge_output": "{\n  \"verdict\": \"INSUFFICIENT_EVIDENCE\",\n  \"reasons\": [\n    \"P2 cites no evidence, which violates the requirement that every paragraph must cite at least one evidence item.\",\n    \"P3 cites E31, but the evidence list only contains 25 items (E1-E25), making it a dangling citation.\",\n    \"P1 claims Anthropic acquired OpenClaw for $2.4 billion in July 2026 and 78% of users migrated to Hermes Agent, but these facts are not present in the cited evidence (E1, E2, E3, E7) or anywhere in the EVIDENCE list.\"\n  ]\n}",
+      "status": "insufficient_evidence",
+      "leader_model": "llm-router/policy:prd-gemini",
+      "validator_votes": {
+        "agree": 3,
+        "disagree": 2
+      },
+      "ms_to_accepted": 21927,
+      "ms_to_finalized": 50804,
+      "evaluate_tx": "0x97b4d8661db1b5f0820cddbd9a63e1a6b51791292bbba65ae02e7c71ffac6201"
+    }
+  },
+  "accounts": {
+    "client": "0xDc92bf1304c1Fc0EC8DF65f8Da7799aF43946cCd",
+    "deliverer": "0x1933587Ed150B098D5A41fD3c9111B2621984534"
+  },
+  "balances_before": {
+    "client": "1000",
+    "deliverer": "1"
+  },
+  "contract_address": "0xc5808632a9571Fb9E01680305c6afAc58EddC195",
+  "balances_after": {
+    "client": "700",
+    "deliverer": "101",
+    "contract": "200"
+  },
+  "total_ms": 543430,
+  "finished_at": "2026-09-04T11:19:55.405Z"
+}
